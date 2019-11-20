@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="/CDN/Content/Css/style.css" rel="stylesheet">
+    <link href="/CDN/Content/Css/flexslider.css" rel="stylesheet">
+    <link href="/CDN/Content/Css/bootstrap.css" rel="stylesheet">
+    <link href="/CDN/Content/Css/animations.css" rel="stylesheet">
+    <link href="/CDN/Content/Css/magnific-popup.css" rel="stylesheet">
+    <link href="/CDN/Content/Css/icon-fonts.css" rel="stylesheet">
+    
+    @Styles.Render("~/bundles/basestyles")
+    <style type="text/css">
+        .flex_style1 {
+            height : 500px;
+        }
+        @@font-face {
+            font-family: "My Custom Font";
+            src: url('/fonts/Southern.ttf') format("truetype");
+        }
+        p {
+            font-family: "My Custom Font", Southern;
+        }
+    </style>
+    <style type="text/css">
+        /*@@import url('https://fonts.googleapis.com/css?family=Nunito');
+        @@import url('https://fonts.googleapis.com/css?family=Poiret+One');*/
+
+        body, html {
+            background-repeat: no-repeat; /*background-image: linear-gradient(rgb(12, 97, 33),rgb(104, 145, 162));*/
+            position: relative;
+        }
+
+        #particles-js {
+            display: none !important;
+        }
+
+        option {
+            background: none;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: #cecfd3;
+            padding: 20px 30px 10px 10px;
+            margin: 0;
+            width: 89.87%;
+            border: none;
+            border-bottom: 2px solid #cecfd3;
+            border-radius: 10px;
+        }
+    </style>
+
+    <style type="text/css">
+        .sticky-container {
+            padding: 0px;
+            margin: 0px;
+            position: fixed;
+            right: -170px;
+            top: 230px;
+            width: 210px;
+            z-index: 1100;
+        }
+
+        .sticky li {
+            list-style-type: none;
+            background-color: #fff;
+            color: #efefef;
+            height: 43px;
+            padding: 0px;
+            margin: 0px 0px 1px 0px;
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+        }
+
+            .sticky li:hover {
+                margin-left: -115px;
+            }
+
+            .sticky li img {
+                float: left;
+                margin: 5px 4px;
+                margin-right: 5px;
+            }
+
+            .sticky li p {
+                padding-top: 5px;
+                margin: 0px;
+                line-height: 16px;
+                font-size: 11px;
+            }
+
+                .sticky li p a {
+                    text-decoration: none;
+                    color: #2C3539;
+                }
+
+                    .sticky li p a:hover {
+                        text-decoration: underline;
+                    }
+    </style>
+    @RenderSection("styles", required: false)
+</head>
+<body class="dark_sup_menu one_page_site light_header">
+    <div id="main_wrapper">
+        <section id="home_section">
+            @Html.Partial("~/Views/Partial/Header.cshtml")
+            @RenderBody()
+            @Html.Partial("~/Views/Partial/Footer.cshtml")
+        </section>
+        <div class="sticky-container">
+            <ul class="sticky">
+                <li>
+                    <img src="/CDN/UI/images/facebook-circle.png" width="32" height="32">
+                    <p><a href="https://www.facebook.com/" target="_blank">Like Us on<br>Facebook</a></p>
+                </li>
+                <li>
+                    <img src="/CDN/UI/images/twitter-circle.png" width="32" height="32">
+                    <p><a href="https://twitter.com/" target="_blank">Follow Us on<br>Twitter</a></p>
+                </li>
+                @*<li>
+                    <img src="/CDN/UI/images/gplus-circle.png" width="32" height="32">
+                    <p><a href="https://plus.google.com/" target="_blank">Follow Us on<br>Google+</a></p>
+                </li>*@
+                <li>
+                    <img src="/CDN/UI/images/linkedin-circle.png" width="32" height="32">
+                    <p><a href="https://www.linkedin.com/" target="_blank">Follow Us on<br>LinkedIn</a></p>
+                </li>
+                <li>
+                    <img src="/CDN/UI/images/insta.png" width="32" height="32">
+                    <p><a href="https://instagram.com" target="_blank">Follow Us<br>Instagram</a></p>
+                </li>
+                <li>
+                    <img src="/CDN/UI/images/youtube-circle.png" width="32" height="32">
+                    <p><a href="https://youtube.com" target="_blank">Subscribe on<br>Youtube</a></p>
+                </li>
+                <li>
+                    <img src="/CDN/UI/images/pin-circle.png" width="32" height="32">
+                    <p><a href="https://www.pinterest.com/" target="_blank">Follow Us on<br>Pinterest</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/CDN/Content/Scripts/Jquery.js"></script>
+    <script src="/CDN/Content/Scripts/jquery.nav.js"></script>
+    <script src="/CDN/Content/Scripts/flexslider-min.js"></script>
+    <script src="/CDN/Content/Scripts/plugins.js"></script>
+    <script src="/CDN/Content/Scripts/isotope.pkgd.min.js"></script>
+    <script src="/CDN/Content/Scripts/gmaps.js"></script>
+    <script src="/CDN/Content/Scripts/progressbar.min.js"></script>
+    <script src="/CDN/Content/Scripts/functions.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

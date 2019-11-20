@@ -1,0 +1,40 @@
+c:\Users\technologies\documents\visual studio 2015\Projects\Hangout\Logger\bin\Debug\NLog.config
+c:\Users\technologies\documents\visual studio 2015\Projects\Hangout\Logger\bin\Debug\Logger.dll
+c:\Users\technologies\documents\visual studio 2015\Projects\Hangout\Logger\bin\Debug\Logger.pdb
+c:\Users\technologies\documents\visual studio 2015\Projects\Hangout\Logger\bin\Debug\NLog.dll
+c:\Users\technologies\documents\visual studio 2015\Projects\Hangout\Logger\bin\Debug\NLog.xml
+c:\Users\technologies\documents\visual studio 2015\Projects\Hangout\Logger\obj\Debug\Logger.dll
+c:\Users\technologies\documents\visual studio 2015\Projects\Hangout\Logger\obj\Debug\Logger.pdb
+c:\Users\technologies\documents\visual studio 2015\Projects\Hangout\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout\Logger\bin\Debug\NLog.config
+F:\Document\Hangout-Project\Hangout\Logger\bin\Debug\Logger.dll
+F:\Document\Hangout-Project\Hangout\Logger\bin\Debug\Logger.pdb
+F:\Document\Hangout-Project\Hangout\Logger\bin\Debug\NLog.dll
+F:\Document\Hangout-Project\Hangout\Logger\bin\Debug\NLog.xml
+F:\Document\Hangout-Project\Hangout\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout\Logger\obj\Debug\Logger.dll
+F:\Document\Hangout-Project\Hangout\Logger\obj\Debug\Logger.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\Logger\bin\Debug\NLog.config
+F:\Document\Hangout-Project\Hangout-26-06-18\Logger\bin\Debug\Logger.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Logger\bin\Debug\Logger.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\Logger\bin\Debug\NLog.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Logger\bin\Debug\NLog.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout-26-06-18\Logger\obj\Debug\Logger.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Logger\obj\Debug\Logger.pdb
+F:\Hang-Out\Logger\bin\Debug\NLog.config
+F:\Hang-Out\Logger\bin\Debug\Logger.dll
+F:\Hang-Out\Logger\bin\Debug\Logger.pdb
+F:\Hang-Out\Logger\bin\Debug\NLog.dll
+F:\Hang-Out\Logger\bin\Debug\NLog.xml
+F:\Hang-Out\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+F:\Hang-Out\Logger\obj\Debug\Logger.dll
+F:\Hang-Out\Logger\obj\Debug\Logger.pdb
+E:\Client\Hang-out\project\Logger\bin\Debug\NLog.config
+E:\Client\Hang-out\project\Logger\bin\Debug\Logger.dll
+E:\Client\Hang-out\project\Logger\bin\Debug\Logger.pdb
+E:\Client\Hang-out\project\Logger\bin\Debug\NLog.dll
+E:\Client\Hang-out\project\Logger\bin\Debug\NLog.xml
+E:\Client\Hang-out\project\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+E:\Client\Hang-out\project\Logger\obj\Debug\Logger.dll
+E:\Client\Hang-out\project\Logger\obj\Debug\Logger.pdb

@@ -1,0 +1,208 @@
+﻿@model enUser
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <style type="text/css">
+        .inner {
+            padding: 40px 40px 20px 25px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 105px;
+            margin: 0px;
+            outline: none;
+        }
+
+        .contact1 {
+            border: 1px #cc202e solid;
+            padding: 20px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .map-sec {
+            float: right;
+            position: relative;
+            z-index: 1;
+            margin-top: -10px;
+        }
+
+        .pointer {
+            float: left;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .inner h1 {
+            font-family: 'oswaldbold';
+            font-size: 30px;
+            color: #cc202e;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .cont-detail h4 {
+            text-transform: none;
+            font-family: 'oswaldbold';
+            font-weight: normal;
+            font-size: 24px;
+            margin: 40px 0 0 0;
+        }
+
+        .off-state, .off {
+            position: relative;
+            margin: 20px 0 0 0;
+        }
+
+        .reg-office h5 {
+            color: #cc202e;
+            font-size: 18px;
+            font-family: 'oswaldbold';
+            margin-bottom: 5px;
+        }
+
+        .cont-detail {
+            position: relative;
+        }
+
+        .cf {
+            margin: 0 auto 50px auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000;
+            text-shadow: 1px 1px 0 white;
+        }
+
+        h3 {
+            text-align: center;
+            color: #000;
+            text-shadow: 1px 1px 0 white;
+        }
+
+        h4 {
+            text-align: center;
+            color: #000;
+            text-shadow: 1px 1px 0 white;
+        }
+
+        form {
+            max-width: 600px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+            form input, form textarea {
+                border: 0;
+                outline: 0;
+                padding: 1em;
+                -moz-border-radius: 8px;
+                -webkit-border-radius: 8px;
+                border-radius: 8px;
+                display: block;
+                width: 100%;
+                margin-top: 1em;
+                font-family: 'Merriweather', sans-serif;
+                -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                resize: none;
+            }
+
+                form input:focus, form textarea:focus {
+                    -moz-box-shadow: 0 0px 2px #e74c3c !important;
+                    -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+                    box-shadow: 0 0px 2px #e74c3c !important;
+                }
+
+        .submit {
+            color: white;
+            background: #cc202e;
+            cursor: pointer;
+        }
+
+            .submit:hover {
+                -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+                -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+                box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+            }
+
+        form textarea {
+            height: 126px;
+            border: 1px solid #ddd;
+        }
+
+        .half {
+            float: left;
+            width: 48%;
+            margin-bottom: 1em;
+        }
+
+        .right {
+            width: 50%;
+        }
+
+        .left {
+            margin-right: 2%;
+        }
+
+        @@media (max-width: 480px) {
+            .half {
+                width: 100%;
+                float: none;
+                margin-bottom: 0;
+            }
+        }
+        /* Clearfix */
+        .cf:before,
+        .cf:after {
+            content: " ";
+            /* 1 */
+            display: table;
+            /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+        }
+    </style>
+}
+@section scripts{
+    <script type="text/javascript">
+        function checkAmt() {
+            var amt = $("#Amount").val();
+            if (amt <= 0) {
+                alert("amount not appropreat")
+                return false;
+            }
+        }
+    </script>
+    }
+
+<div class="container">
+    <div class="row">
+        
+        <section style="margin:15% 0px 15% 0px ;">
+            <h1><p>Payment</p> </h1>
+            @using (Html.BeginForm())
+            {
+                @Html.HiddenFor(x => x.Sponsor_ID)
+                <div class="half left cf">
+                    @Html.TextBoxFor(x => x.Name, new { required = "", @readonly = "readonly" })
+                    @Html.TextBoxFor(x => x.Contact, new { required = "", @readonly = "readonly" })
+                </div>
+                    <div class="half right cf">
+                        @Html.TextBoxFor(x => x.E_Mail, new { placeholder = "E-Mail", required = "", @readonly = "readonly" })
+                        @Html.TextBoxFor(x => x.Amount, new { placeholder = "Amount", required = "" })
+                    </div>
+                    <input class="submit" type="submit" style="background-color:#00466e" onclick="checkAmt()"  value="Submit" name="submit1">
+            }
+        </section>
+    </div>
+</div>
+

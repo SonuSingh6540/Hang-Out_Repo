@@ -1,0 +1,97 @@
+﻿@model List<enDebateAdvertisementImage>
+@{
+    ViewBag.Title = "Index";
+    int j = 0;
+}
+
+<div class="row heading-bg  bg-red">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h5 class="txt-light">debate advertisement Image</h5>
+    </div>
+    <!-- Breadcrumb -->
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <ol class="breadcrumb">
+            <li><a href="#">DebateAdvertisementImage</a></li>
+            <li class="active"><span>Upload Image</span></li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default card-view">
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="form-wrap">
+                        @using (Html.BeginForm("uploadimage", "debateadvertisement", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <h6 class="txt-dark capitalize-font"><i class="icon-list mr-10"></i>add debateAdvertisement</h6>
+                            <hr>
+
+                            for (var i = 0; i < 5; i++)
+                            {
+                                <div class="row">
+                                    @Html.HiddenFor(m => m[i].ID)
+                                    @Html.HiddenFor(m => m[i].FKDebateAdvertisementId)
+                                    @Html.HiddenFor(m => m[i + 1].ID)
+                                    @Html.HiddenFor(m => m[i + 1].FKDebateAdvertisementId)
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">File</label>
+                                            @Html.TextBoxFor(m => m[j].files, new { @class = "upload", @type = "file" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">Url</label>
+                                            @Html.TextBoxFor(m => m[j].Url, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-1">
+                                        @if (Model[j].ID > 0)
+                                        {
+                                            <div class="form-group">
+                                                <label class="control-label mb-10">Delete</label>
+                                                <a class="btn red form-control" href="/debateadvertisement/DeleteDebateAdvertisementImage/@Model[i].ID">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">File</label>
+                                            @Html.TextBoxFor(m => m[j + 1].files, new { @class = "upload", @type = "file" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">Url</label>
+                                            @Html.TextBoxFor(m => m[j + 1].Url, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-1">
+                                        @if (Model[j + 1].ID > 0)
+                                        {
+                                            <div class="form-group">
+                                                <label class="control-label mb-10">Delete</label>
+                                                <a class="btn red form-control" href="/debateadvertisement/DeleteDebateAdvertisementImage/@Model[i+1].ID/@Model[i+1].FKDebateAdvertisementId">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                                j = j + 2;
+                            }
+                            <div class="form-actions">
+                                <button class="btn btn-success btn-icon left-icon mr-10"> <i class="fa fa-check"></i> <span>save</span></button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

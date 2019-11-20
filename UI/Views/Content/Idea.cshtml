@@ -1,0 +1,79 @@
+﻿@model enContent
+@{
+    ViewBag.Title = "Innovative Idea";
+    var ImagePath = Helper.AdvertisementImagePath();
+
+    var LeftAdvertisement = " ";
+    var RightAdvertisement = " ";
+    var LeftUrl = " ";
+    var RightUrl = " ";
+
+    if (ViewBag.LeftAdvPanel != null)
+    {
+        enAdvertisement objENAdvertisement = (enAdvertisement)ViewBag.LeftAdvPanel;
+        LeftAdvertisement = ImagePath + objENAdvertisement.Image_Name;
+        LeftUrl = objENAdvertisement.Url;
+    }
+    if (ViewBag.RightAdvPanel != null)
+    {
+        enAdvertisement objENAdvertisement = (enAdvertisement)ViewBag.RightAdvPanel;
+        RightAdvertisement = ImagePath + objENAdvertisement.Image_Name;
+        RightUrl = objENAdvertisement.Url;
+    }
+}
+
+@section styles{
+    <style>
+        .footer_img {
+            position: relative;
+            height: 100px;
+        }
+
+        #clip {
+            position: absolute;
+            height: 250px;
+            clip: rect(35px, 207px, 70px, 0px);
+            margin-left: -130px;
+        }
+    </style>
+}
+
+<section class="content_section white_section page_title has_bg_image member_header bg_header2 enar_parallax">
+    <div class="content clearfix">
+        @*<h1 class=""><strong>INNOVATIVE IDEA</strong></h1>*@
+    </div>
+</section>
+<!-- End Page Title -->
+<!-- Skills -->
+
+<section class="content_section flex_style1">
+    <div class="content row_spacer no_padding">
+        <div class="rows_container clearfix" style="text-align:center;">
+            <div class="col-md-3">
+                @*<a href="@Url.Content("http://"+LeftUrl)" target="_blank">
+                    <div>
+                        <img src="@Url.Content(LeftAdvertisement)" title="@LeftUrl" />
+                    </div>
+                </a>*@
+            </div>
+
+            <div class="col-md-6">
+                @Html.Raw(Model.Description)
+                <div class="footer_img">
+                    <img id="clip" src="~/CDN/UI/Images/Rewark_Footer_img.jpg" />
+                </div>
+            </div><!-- Grid 6 -->
+            
+            <div class="col-md-3">
+                @*<a href="@Url.Content("http://"+RightUrl)" target="_blank">
+                    <div>
+                        <img src="@Url.Content(RightAdvertisement)" title="@RightUrl" />
+                    </div>
+                </a>*@
+            </div>
+            <!-- Grid 6 -->
+        </div>
+    </div>
+</section>
+
+

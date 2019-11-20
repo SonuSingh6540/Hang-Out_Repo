@@ -1,0 +1,77 @@
+﻿@model enContent
+
+@{
+    ViewBag.Title = "About Us";
+    var ImagePath = Helper.AdvertisementImagePath();
+
+    var LeftAdvertisement = "";
+    var RightAdvertisement = "";
+    var LeftUrl = "";
+    var RightUrl = "";
+
+    if (ViewBag.LeftAdvPanel != null)
+    {
+        enAdvertisement objENAdvertisement = (enAdvertisement)ViewBag.LeftAdvPanel;
+        LeftAdvertisement = ImagePath + objENAdvertisement.Image_Name;
+        LeftUrl = objENAdvertisement.Url;
+    }
+    if (ViewBag.RightAdvPanel != null)
+    {
+        enAdvertisement objENAdvertisement = (enAdvertisement)ViewBag.RightAdvPanel;
+        RightAdvertisement = ImagePath + objENAdvertisement.Image_Name;
+        RightUrl = objENAdvertisement.Url;
+    }
+}
+
+@section styles{
+    <style type="text/css">
+        img {
+            display: none;
+        }
+
+            img[src] {
+                display: block;
+            }
+    </style>
+}
+
+<section class="content_section flex_style1">
+    <div class="content row_spacer no_padding">
+        <div class="rows_container clearfix" style="text-align:center;">
+            <div class="col-md-3">
+                @if (LeftUrl != "")
+                {
+                    <a href="@Url.Content("http://"+LeftUrl)" target="_blank">
+                        <div>
+                            <img src="@Url.Content(LeftAdvertisement)" title="@LeftUrl" style="height: 200px;border-radius: 20px;" />
+                            <img style="height: 200px;border-radius: 20px;">
+                        </div>
+                    </a>
+                }
+            </div>
+
+            <div class="col-md-6" style="margin-top:-15px">
+                @Html.Raw(Model.Description)
+            </div><!-- Grid 6 -->
+
+            <div class="col-md-3">
+                @if (RightUrl != "")
+                {
+                    <a href="@Url.Content("http://"+RightUrl)" target="_blank">
+                        <div>
+                            <img src="@Url.Content(RightAdvertisement)" title="@RightUrl" style="height: 200px;border-radius: 20px;" />
+                        </div>
+                    </a>
+                }
+            </div>
+            <!-- Grid 6 -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+

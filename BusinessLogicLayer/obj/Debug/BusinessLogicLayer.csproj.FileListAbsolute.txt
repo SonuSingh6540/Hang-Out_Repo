@@ -1,0 +1,55 @@
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\bin\Debug\Entity.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\bin\Debug\Utility.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\bin\Debug\Entity.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\bin\Debug\Utility.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\bin\Debug\Entity.dll
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\bin\Debug\Utility.dll
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\bin\Debug\Entity.pdb
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\bin\Debug\Utility.pdb
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+F:\Document\Hangout-Project\Hangout\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\bin\Debug\Entity.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\bin\Debug\Utility.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\bin\Debug\Entity.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\bin\Debug\Utility.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+F:\Hang-Out\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+F:\Hang-Out\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+F:\Hang-Out\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+F:\Hang-Out\BusinessLogicLayer\bin\Debug\Entity.dll
+F:\Hang-Out\BusinessLogicLayer\bin\Debug\Utility.dll
+F:\Hang-Out\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+F:\Hang-Out\BusinessLogicLayer\bin\Debug\Entity.pdb
+F:\Hang-Out\BusinessLogicLayer\bin\Debug\Utility.pdb
+F:\Hang-Out\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+F:\Hang-Out\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+F:\Hang-Out\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+E:\Client\Hang-out\project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+E:\Client\Hang-out\project\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+E:\Client\Hang-out\project\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+E:\Client\Hang-out\project\BusinessLogicLayer\bin\Debug\Entity.dll
+E:\Client\Hang-out\project\BusinessLogicLayer\bin\Debug\Utility.dll
+E:\Client\Hang-out\project\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+E:\Client\Hang-out\project\BusinessLogicLayer\bin\Debug\Entity.pdb
+E:\Client\Hang-out\project\BusinessLogicLayer\bin\Debug\Utility.pdb
+E:\Client\Hang-out\project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+E:\Client\Hang-out\project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+E:\Client\Hang-out\project\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

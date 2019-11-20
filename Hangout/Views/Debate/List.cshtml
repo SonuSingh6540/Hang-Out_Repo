@@ -1,0 +1,221 @@
+﻿@model List<enDebate>
+@{
+    ViewBag.Title = "Debate || List";
+    var sn = 1;
+}
+@section styles{
+    <style type="text/css">
+                    <style>
+                .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+         .btn-danger {
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+         .modal-header {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+            background: brown;
+            color: #fff;
+        }
+    </style>
+}
+
+@section scripts{
+    <script type="text/javascript">
+
+        function getParticipants(debID) {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("getparticepent", "debate")',
+                data: { debateID: debID },
+                success: function (data) {
+                    console.log(data)
+                    $("#model-table").find("tr:gt(0)").remove();
+                    var i = 1;
+                    $.each(data, function (indx, val) {
+                        var tr = "<tr class=\"item-editable\"> <td class=\"media-middle text-center\"> " + i + " </td><td class=\"media-middle\"> <h5> " + val.User_.Name + " </h5> </td><td> <div class=\"media\"> <div class=\"media-body\"> <h5> " + val.LikesCount + " </h5> </div></div></td></tr>"
+                        $("#model-table").append(tr);
+                        i++;
+                    });
+                }
+            })
+        }
+
+        $('#tbl').DataTable();
+    </script>
+}
+
+<!-- Title -->
+<div class="row heading-bg bg-green">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h5 class="txt-light">Debate</h5>
+    </div>
+    <!-- Breadcrumb -->
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <ol class="breadcrumb">
+            <li><a href="#">Debate</a></li>
+            <li class="active"><span>List</span></li>
+        </ol>
+    </div>
+    <!-- /Breadcrumb -->
+</div>
+<!-- /Title -->
+<!-- Row -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default card-view">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">debate Table</h6>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="table-wrap">
+                        <div class="table-responsive">
+                            <table id="tbl" class="table table-hover display  pb-30">
+                                <thead>
+                                    <tr>
+                                        <td>S.No</td>
+                                        <th>Topic</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Participants</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <td>S.No</td>
+                                        <th>Topic</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Participants</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr class="item-editable">
+                                            <td>
+                                                @sn
+                                            </td>
+                                            <td>
+                                                @Html.Raw(item.Topic)
+                                            </td>
+                                            <td>
+                                                @Html.Raw(item.Description)
+                                            </td>
+                                            <td>
+                                                @Helper.ConvertDateTimeToDate(item.Date)
+                                            </td>
+                                            <td>
+                                                @item.Start.ToString(@"hh\:mm") - @item.End.ToString(@"hh\:mm")
+                                            </td>
+                                            <td>
+                                                @Html.Raw(item.Category_.Name)
+                                            </td>
+                                            <td>
+                                                @if (item.IsActive == false)
+                                                {
+                                                    <button type="submit" class="btn btn-danger" disabled>Stop</button>
+                                                }
+                                                else
+                                                {
+                                                    <a class="btn btn-success" href="/debate/isactive/@item.ID">Start</a>
+                                                }
+                                            </td>
+                                            <td>
+                                                <a onclick="getParticipants(@item.ID)" data-toggle="modal" data-target="#myModal" style="color:#000"><i class="fa fa-eye" aria-hidden="true" style="margin-right:5px"></i>View</a>
+                                            </td>
+                                            <td>
+                                                <a class="btn blue btn-outline sbold" href="/debate/update/@item.ID">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </a>
+                                                <a class="btn red btn-outline sbold" href="/debate/delete/@item.ID">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        sn++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Row -->
+<!-- .row -->
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Participants List & Likes</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table id="model-table" class="table table-striped table-bordered table-model">
+                        <tr>
+                            <td>
+                                S.no
+                            </td>
+                            <th>Name</th>
+                            <th>Total Likes</th>
+                        </tr>
+
+
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,23 @@
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Entity\bin\Debug\Entity.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Entity\bin\Debug\Entity.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Entity\obj\Debug\Entity.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Entity\obj\Debug\Entity.pdb
+F:\Document\Hangout-Project\Hangout\Entity\bin\Debug\Entity.dll
+F:\Document\Hangout-Project\Hangout\Entity\bin\Debug\Entity.pdb
+F:\Document\Hangout-Project\Hangout\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout\Entity\obj\Debug\Entity.dll
+F:\Document\Hangout-Project\Hangout\Entity\obj\Debug\Entity.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\Entity\bin\Debug\Entity.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Entity\bin\Debug\Entity.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\Entity\obj\Debug\Entity.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Entity\obj\Debug\Entity.pdb
+F:\Hang-Out\Entity\bin\Debug\Entity.dll
+F:\Hang-Out\Entity\bin\Debug\Entity.pdb
+F:\Hang-Out\Entity\obj\Debug\Entity.dll
+F:\Hang-Out\Entity\obj\Debug\Entity.pdb
+E:\Client\Hang-out\project\Entity\bin\Debug\Entity.dll
+E:\Client\Hang-out\project\Entity\bin\Debug\Entity.pdb
+E:\Client\Hang-out\project\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+E:\Client\Hang-out\project\Entity\obj\Debug\Entity.dll
+E:\Client\Hang-out\project\Entity\obj\Debug\Entity.pdb

@@ -1,0 +1,68 @@
+﻿@model Entity.CustomEntity.PagingInfo
+
+@{
+    var queryString = "";
+    if (Model.QueryStringVariables != null && Model.QueryStringVariables.Count > 0)
+    {
+        queryString = "?";
+        foreach (string key in Model.QueryStringVariables)
+        {
+            queryString += key;
+            queryString += "=";
+            queryString += HttpUtility.UrlEncode(Model.QueryStringVariables[key]);
+            queryString += "&";
+        }
+        queryString = queryString.TrimEnd('&');
+    }
+}
+
+<ul class="pagination pagination-sm no-margin pull-right">
+    @if (Model.ActivePage == 1)
+    {
+        @Html.Raw("<li class='paginate_button previous disabled'>");
+        @Html.Raw("<a href='javascript:void(0);")
+    }
+    else
+    {
+        @Html.Raw("<li class='paginate_button previous'>");
+        @Html.Raw("<a href='")
+        @Html.Raw("/" + ViewContext.Controller.ControllerContext.RouteData.Values["controller"].ToString() + "/" + ViewContext.Controller.ControllerContext.RouteData.Values["action"].ToString() + "/" + (Model.ActivePage - 1) + queryString)
+    }
+
+    @Html.Raw("'><</a>")
+    @Html.Raw("</li>")
+
+    @for (int i = 1; i <= Model.NumberOfPages; i++)
+    {
+        if (i == Model.ActivePage)
+        {
+            @Html.Raw("<li class='paginate_button active'>")
+            @Html.Raw("<a href='javascript:void(0);")
+        }
+        else
+        {
+            @Html.Raw("<li class='paginate_button'>")
+            @Html.Raw("<a href='")
+            @Html.Raw("/" + ViewContext.RouteData.Values["controller"].ToString() + "/" + ViewContext.RouteData.Values["action"].ToString() + "/" + i + queryString)
+        }
+        @Html.Raw("'>")
+        @Html.Raw(i)
+        @Html.Raw("</a>")
+        @Html.Raw("</li>")
+    }
+
+    @if (Model.ActivePage == Model.NumberOfPages)
+    {
+        @Html.Raw("<li class='paginate_button next disabled'>");
+        @Html.Raw("<a href='javascript:void(0);")
+    }
+    else
+    {
+        @Html.Raw("<li class='paginate_button next'>");
+        @Html.Raw("<a href='")
+        @Html.Raw("/" + ViewContext.RouteData.Values["controller"].ToString() + "/" + ViewContext.RouteData.Values["action"].ToString() + "/" + (Model.ActivePage + 1) + queryString)
+    }
+
+    @Html.Raw("'>></a>")
+    @Html.Raw("</li>")
+</ul>

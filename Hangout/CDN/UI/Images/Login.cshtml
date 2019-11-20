@@ -1,0 +1,181 @@
+﻿@model enUser
+@{
+    ViewBag.Title = "Account | Login";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+@section styles{
+    <style type="text/css">
+        @@import url('https://fonts.googleapis.com/css?family=Nunito');
+        @@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+        html {
+            background-image: url(/CDN/UI/images/hang.jpg);
+            background-size: cover;
+            background-color: none !important;
+        }
+
+        body, html {
+            background-repeat: no-repeat; /*background-image: linear-gradient(rgb(12, 97, 33),rgb(104, 145, 162));*/
+            position: relative;
+        }
+
+        #particles-js {
+            display: none !important;
+        }
+
+        option {
+            background: none;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: #cecfd3;
+            padding: 20px 30px 10px 10px;
+            margin: 0;
+            width: 89.87%;
+            border: none;
+            border-bottom: 2px solid #cecfd3;
+            border-radius: 10px;
+        }
+    </style>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(".mail_chk").blur(function () {
+            var str = $(this).val();
+            $.ajax({
+                async: true,
+                type: "POST",
+                url: "/account/checkavailablemail/?mail_=" + str,
+                complete: function (data) {
+                    if (data.responseText.indexOf("s") != -1) {
+                        $('#Availability span').remove();
+                        var name = $("#E_Mail").val();
+                        $("#Availability").append($("<Span></Span>").html("E-mail <b style='color:#9a6a6a'>" + name + "</b> already exist! Try Another Email").css('color', 'white'))
+                        $(".email").val('');
+                    }
+                    else {
+                        $('#Availability span').remove();
+                    }
+                }
+            });
+        });
+    </script>
+}
+
+<div class="head">
+    <div class="logo">
+        <div class="logo-top">
+            <h1>Welcome To Hang-Out</h1>
+        </div>
+        <div class="logo-bottom">
+            <section class="sky-form">
+                <label class="radio"><input type="radio" name="radio" checked=""><i></i>Create a platform to inform the people of what they should know, to educate the people, and to help them reach a logical understanding of the facts.</label>
+                <label class="radio"><input type="radio" name="radio"><i></i>Take your thoughts to the global levels and create an identity of your own with the impact that your views may carry.</label>
+                <label class="radio"><input type="radio" name="radio"><i></i>Express yourself without any intervention from within your group or the opposition.</label>
+                @if (ViewBag.VerificationMessage != null)
+                {
+                    <label style="color:red">@ViewBag.VerificationMessage</label>
+                }
+            </section>
+        </div>
+    </div>
+
+    <div class="login">
+        <div class="sap_tabs">
+            <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+                <ul class="resp-tabs-list">
+                    <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Login</span></li>
+                    <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><label>/</label><span>Sign up</span></li>
+                </ul>
+                <div class="resp-tabs-container">
+                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+                        <div class="login-top">
+                            @using (Html.BeginForm("login", "account", FormMethod.Post))
+                            {
+                            @Html.TextBoxFor(x => x.E_Mail, new { @class = "email", placeholder = "Email", required = "" })
+                            @Html.PasswordFor(x => x.Password, new { @class = "email", placeholder = "Password", required = "" })
+                            <div class="login-bottom login-bottom1">
+                                <div class="submit">
+                                    <a href="#">
+                                        <input style="background:#34608f;color:#fff;border:#34608f;border-radius:10px;width: 100%;
+    padding: 10px;" type="submit" value="LOGIN" />
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                        <div class="login-top">
+                            @using (Html.BeginForm("registration", "account", FormMethod.Post))
+                            {
+                            @Html.TextBoxFor(x => x.Name, new { @class = "name active", placeholder = "Your Name", required = "" })
+                            @Html.TextBoxFor(x => x.E_Mail, new { @class = "email mail_chk", placeholder = "E-Mail", required = "" })
+                            <div id="Availability"></div>
+                            @Html.TextBoxFor(x => x.Password, new { @class = "password", placeholder = "Password", required = "" })
+                            @Html.DropDownListFor(x => x.Country, (IEnumerable<SelectListItem>)CollectionsHelper.IEnumerableCountryCode(), new { style = "background:#a9a9a9;color:#a9a9a9;border:none;outline:none;font-size:16px;color:#757575;padding:20px 30px 10px 10px;margin:10px;width:88.3%;border:none;border-bottom: 2px solid #cecfd3;border-radius:10px" })
+                            @Html.TextBoxFor(x => x.Contact, new { @class = "email", placeholder = "Contact", required = "" })
+                            @Html.TextBoxFor(x => x.Sponsor_ID, new { @class = "email", placeholder = "Sponsor Code" })
+
+                            <div class="login-bottom">
+                                <div class="submit">
+                                    <a href="index.php">
+                                        <input style="background:#34608f;color:#fff;border:#34608f;border-radius:10px;width: 100%;
+    padding: 10px;" type="submit" value="SIGN UP" />
+                                    </a>
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="clear"></div>
+</div>
+
+<!--Sticky-Container-->
+<div class="sticky-container">
+    <ul class="sticky">
+        <li>
+            <img src="/CDN/UI/images/facebook-circle.png" width="32" height="32">
+            <p><a href="https://www.facebook.com/" target="_blank">Like Us on<br>Facebook</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/twitter-circle.png" width="32" height="32">
+            <p><a href="https://twitter.com/" target="_blank">Follow Us on<br>Twitter</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/gplus-circle.png" width="32" height="32">
+            <p><a href="https://plus.google.com/" target="_blank">Follow Us on<br>Google+</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/linkedin-circle.png" width="32" height="32">
+            <p><a href="https://www.linkedin.com/" target="_blank">Follow Us on<br>LinkedIn</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/insta.png" width="32" height="32">
+            <p><a href="https://instagram.com" target="_blank">Follow Us<br>Instagram</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/youtube-circle.png" width="32" height="32">
+            <p><a href="https://youtube.com" target="_blank">Subscribe on<br>Youtube</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/pin-circle.png" width="32" height="32">
+            <p><a href="https://www.pinterest.com/" target="_blank">Follow Us on<br>Pinterest</a></p>
+        </li>
+    </ul>
+</div>
+
+<!--Model Container-->

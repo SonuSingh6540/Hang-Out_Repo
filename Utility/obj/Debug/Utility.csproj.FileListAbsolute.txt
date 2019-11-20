@@ -1,0 +1,48 @@
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Utility\bin\Debug\Utility.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Utility\bin\Debug\Utility.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Utility\obj\Debug\Utility.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\Utility\obj\Debug\Utility.pdb
+F:\Document\Hangout-Project\Hangout\Utility\bin\Debug\Utility.dll
+F:\Document\Hangout-Project\Hangout\Utility\bin\Debug\Utility.pdb
+F:\Document\Hangout-Project\Hangout\Utility\bin\Debug\System.Web.Http.dll
+F:\Document\Hangout-Project\Hangout\Utility\bin\Debug\System.Net.Http.Formatting.dll
+F:\Document\Hangout-Project\Hangout\Utility\bin\Debug\Newtonsoft.Json.dll
+F:\Document\Hangout-Project\Hangout\Utility\bin\Debug\System.Web.Http.xml
+F:\Document\Hangout-Project\Hangout\Utility\bin\Debug\System.Net.Http.Formatting.xml
+F:\Document\Hangout-Project\Hangout\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout\Utility\obj\Debug\Utility.dll
+F:\Document\Hangout-Project\Hangout\Utility\obj\Debug\Utility.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\bin\Debug\Utility.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\bin\Debug\Utility.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\bin\Debug\System.Web.Http.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\bin\Debug\System.Net.Http.Formatting.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\bin\Debug\Newtonsoft.Json.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\bin\Debug\System.Web.Http.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\bin\Debug\System.Net.Http.Formatting.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\obj\Debug\Utility.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\Utility\obj\Debug\Utility.pdb
+F:\Hang-Out\Utility\bin\Debug\Utility.dll
+F:\Hang-Out\Utility\bin\Debug\Utility.pdb
+F:\Hang-Out\Utility\bin\Debug\Entity.dll
+F:\Hang-Out\Utility\bin\Debug\System.Web.Http.dll
+F:\Hang-Out\Utility\bin\Debug\System.Net.Http.Formatting.dll
+F:\Hang-Out\Utility\bin\Debug\Newtonsoft.Json.dll
+F:\Hang-Out\Utility\bin\Debug\Entity.pdb
+F:\Hang-Out\Utility\bin\Debug\System.Web.Http.xml
+F:\Hang-Out\Utility\bin\Debug\System.Net.Http.Formatting.xml
+F:\Hang-Out\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+F:\Hang-Out\Utility\obj\Debug\Utility.dll
+F:\Hang-Out\Utility\obj\Debug\Utility.pdb
+E:\Client\Hang-out\project\Utility\bin\Debug\Utility.dll
+E:\Client\Hang-out\project\Utility\bin\Debug\Utility.pdb
+E:\Client\Hang-out\project\Utility\bin\Debug\Entity.dll
+E:\Client\Hang-out\project\Utility\bin\Debug\System.Net.Http.Formatting.dll
+E:\Client\Hang-out\project\Utility\bin\Debug\Newtonsoft.Json.dll
+E:\Client\Hang-out\project\Utility\bin\Debug\Entity.pdb
+E:\Client\Hang-out\project\Utility\bin\Debug\System.Web.Http.xml
+E:\Client\Hang-out\project\Utility\bin\Debug\System.Net.Http.Formatting.xml
+E:\Client\Hang-out\project\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+E:\Client\Hang-out\project\Utility\obj\Debug\Utility.dll
+E:\Client\Hang-out\project\Utility\obj\Debug\Utility.pdb

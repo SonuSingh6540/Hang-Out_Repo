@@ -1,0 +1,288 @@
+﻿@model enUser
+@{
+    ViewBag.Title = "Account | Login";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+@section styles{
+    <style type="text/css">
+        @@import url('https://fonts.googleapis.com/css?family=Nunito');
+        @@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+        body, html {
+            background-repeat: no-repeat; /*background-image: linear-gradient(rgb(12, 97, 33),rgb(104, 145, 162));*/
+            position: relative;
+        }
+
+        #particles-js {
+            display: none !important;
+        }
+
+        option {
+            background: none;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: #cecfd3;
+            padding: 20px 30px 10px 10px;
+            margin: 0;
+            width: 89.87%;
+            border: none;
+            border-bottom: 2px solid #cecfd3;
+            border-radius: 10px;
+        }
+    </style>
+    <style type="text/css">
+        /* Sticky Social Icons */
+        .sticky-container {
+            padding: 0px;
+            margin: 0px;
+            position: fixed;
+            right: -170px;
+            top: 230px;
+            width: 210px;
+            z-index: 1100;
+        }
+
+        .sticky li {
+            list-style-type: none;
+            background-color: #fff;
+            color: #efefef;
+            height: 43px;
+            padding: 0px;
+            margin: 0px 0px 1px 0px;
+            -webkit-transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+        }
+
+            .sticky li:hover {
+                margin-left: -115px;
+            }
+
+            .sticky li img {
+                float: left;
+                margin: 5px 4px;
+                margin-right: 5px;
+            }
+
+            .sticky li p {
+                padding-top: 5px;
+                margin: 0px;
+                line-height: 16px;
+                font-size: 11px;
+            }
+
+                .sticky li p a {
+                    text-decoration: none;
+                    color: #2C3539;
+                }
+
+                    .sticky li p a:hover {
+                        text-decoration: underline;
+                    }
+        /* Sticky Social Icons */
+    </style>
+
+    <style>
+        .modal-dialog {
+            overflow-y: initial !important;
+        }
+
+        .modal-body {
+            height: 500px;
+            overflow-y: auto;
+        }
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+    </style>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(".mail_chk").blur(function () {
+            var str = $(this).val();
+            $.ajax({
+                async: true,
+                type: "POST",
+                url: "/account/checkavailablemail/?mail_=" + str,
+                complete: function (data) {
+                    if (data.responseText.indexOf("s") != -1) {
+                        $('#Availability span').remove();
+                        var name = $("#E_Mail").val();
+                        $("#Availability").append($("<Span></Span>").html("E-mail <b style='color:#9a6a6a'>" + name + "</b> already exist! Try Another Email").css('color', 'white'))
+                        $(".email").val('');
+                    }
+                    else {
+                        $('#Availability span').remove();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            @if(ViewBag.Contest != null)
+            {
+                @:$("#myModal").modal("show")
+            }
+        });
+
+        function UserIntrest(id,status) {
+            $("#ContestID").val(id)
+            $("#Status").val(status)
+        }
+    </script>
+}
+
+<div class="loginContainer">
+    <div class="head">
+        <div class="logo">
+            <div class="logo-top">
+                <h1><p>Welcome To Hang-Out</p></h1>
+            </div>
+            <div class="logo-bottom">
+                <section class="sky-form">
+                    <label class="radio"><input type="radio" name="radio"><i></i><p>Create a platform to inform the people of what they should know, to educate the people, and to help them reach a logical understanding of the facts.</p></label>
+                    <label class="radio"><input type="radio" name="radio"><i></i><p>Take your thoughts to the global levels and create an identity of your own with the impact that your views may carry.</p></label>
+                    <label class="radio"><input type="radio" name="radio"><i></i><p>Express yourself without any intervention from within your group or the opposition.</p></label>
+                </section>
+            </div>
+            @if (ViewBag.VerificationMessage != null)
+            {
+                <p style="color:red;margin: 23px 3px 2px 60px">@ViewBag.VerificationMessage</p>
+            }
+        </div>
+
+        <div class="login">
+            <div class="sap_tabs">
+                <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+                    <ul class="resp-tabs-list">
+                        <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span><p>Login</p></span></li>
+                        <label style="color:white">/</label>
+                        <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span><p>Sign up</p></span></li>
+                    </ul>
+                    <div class="resp-tabs-container">
+                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                            <div class="login-top">
+                                @using (Html.BeginForm("login", "account", FormMethod.Post))
+                                {
+                                    @Html.HiddenFor(x=> x.Status)
+                                    @Html.HiddenFor(x=> x.ContestID)
+                                    @Html.TextBoxFor(x => x.E_Mail, new { @class = "email", placeholder = "Email", required = "" })
+                                    @Html.PasswordFor(x => x.Password, new { @class = "email", placeholder = "Password", required = "" })
+                                    <div class="login-bottom1">
+                                        <div class="submit">
+                                            <a href="#">
+                                                <input style="background:#34608f;color:#fff;border:#34608f;border-radius:10px;width: 100%;
+    padding: 10px;" type="submit" value="LOGIN" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                            <div class="login-top">
+                                @using (Html.BeginForm("registration", "account", FormMethod.Post))
+                                {
+                                    @Html.TextBoxFor(x => x.Name, new { @class = "name active", placeholder = "Your Name", required = "" })
+                                    @Html.TextBoxFor(x => x.E_Mail, new { @class = "email mail_chk", placeholder = "E-Mail", required = "" })
+                                    <div id="Availability"></div>
+                                    @Html.TextBoxFor(x => x.Password, new { @class = "password", placeholder = "Password", required = "" })
+                                    @Html.DropDownListFor(x => x.Country, (IEnumerable<SelectListItem>)CollectionsHelper.IEnumerableCountryCode(), new { @class = "signUpDropdown" })
+                                    @Html.TextBoxFor(x => x.Contact, new { @class = "email", placeholder = "Contact", required = "" })
+                                    @Html.TextBoxFor(x => x.Sponsor_ID, new { @class = "email", placeholder = "Sponsor Code" })
+                                    <div class="login-bottom1">
+                                        <div class="submit">
+                                            <a href="index.php">
+                                                <input style="background:#34608f;color:#fff;border:#34608f;border-radius:10px;width: 100%;
+    padding: 10px;" type="submit" value="SIGN UP" />
+                                            </a>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div class="sticky-container">
+    <ul class="sticky">
+        <li>
+            <img src="/CDN/UI/images/facebook-circle.png" width="32" height="32">
+            <p><a href="https://www.facebook.com/" target="_blank">Like Us on<br>Facebook</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/twitter-circle.png" width="32" height="32">
+            <p><a href="https://twitter.com/" target="_blank">Follow Us on<br>Twitter</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/linkedin-circle.png" width="32" height="32">
+            <p><a href="https://www.linkedin.com/" target="_blank">Follow Us on<br>LinkedIn</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/insta.png" width="32" height="32">
+            <p><a href="https://instagram.com" target="_blank">Follow Us<br>Instagram</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/youtube-circle.png" width="32" height="32">
+            <p><a href="https://youtube.com" target="_blank">Subscribe on<br>Youtube</a></p>
+        </li>
+        <li>
+            <img src="/CDN/UI/images/pin-circle.png" width="32" height="32">
+            <p><a href="https://www.pinterest.com/" target="_blank">Follow Us on<br>Pinterest</a></p>
+        </li>
+    </ul>
+</div>
+
+<!-- Modal -->
+@if (ViewBag.Contest != null)
+{
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>
+                        @ViewBag.Contest.Description
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal" onclick="UserIntrest(@ViewBag.Contest.ID,true)">Interested</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="UserIntrest(@ViewBag.Contest.ID,false)">Not Interested</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

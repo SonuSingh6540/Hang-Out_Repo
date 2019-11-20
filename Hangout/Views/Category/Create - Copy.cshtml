@@ -1,0 +1,108 @@
+﻿@model enCategory
+@{
+    ViewBag.Title = "Create";
+    var sn = 1;
+    var ActionMethod = "create";
+    if (Model != null)
+    {
+        ActionMethod = "update";
+    }
+}
+
+@section styles{
+    <style type="text/css">
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+
+        .btn-danger {
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .modal-header {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+            background: brown;
+            color: #fff;
+        }
+    </style>
+}
+@section scripts{
+    <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        CKEDITOR.replace('Name');
+        if (@Model != null)
+        {
+            ViewBag.Title = "Activity | Update";
+            Controller = "update";
+        }
+    </script>
+}
+
+<div class="container-fluid">
+    @using (Html.BeginForm(ActionMethod, "category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="with_border with_padding">
+                    <h4>Add Category</h4>
+                    <hr>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Category Name</label>
+                        <div class="col-lg-9">
+                            @Html.TextAreaFor(item => item.Name, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Upload Image:</label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(x => x.file, new { @type = "file" })
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Is Active</label>
+                        <div class="col-lg-9">
+                            @Html.DropDownListFor(x => x.IsActive, Enum.GetValues(typeof(IsActive)).Cast<IsActive>().Select(x => new SelectListItem() { Text = (x).ToString(), Value = Convert.ToBoolean((int)x).ToString() }).ToList(), new { @class = "bs-select form-control", required = "required" })
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" class="theme_button wide_button">Save</button>
+                        </div>
+                    </div>
+                    <!-- .row  -->
+                </div>
+                <!-- .with_border -->
+            </div>
+            <!-- .col-* -->
+            <!-- .col-* -->
+        </div>
+    }
+</div>

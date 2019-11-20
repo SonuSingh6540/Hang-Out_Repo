@@ -1,0 +1,75 @@
+﻿@model enContent
+@{
+    ViewBag.Title = "Hangout || Content";
+}
+
+@section scripts{
+    <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        CKEDITOR.replace('Description');
+
+        $("#Type").on("change", function () {
+            var type = this.value;
+            $.ajax({
+                async: true,
+                type: "GET",
+                url: "/content/getdescription?typeID=" + type,
+                success: function (result) {
+                    if (result.Description == null)
+                        result.Description = " ";
+                    CKEDITOR.instances['Description'].setData(result.Description);
+                }
+            });
+        })
+    </script>
+}
+ <!-- Title -->
+<div class="row heading-bg  bg-red">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h5 class="txt-light">content</h5>
+    </div>
+    <!-- Breadcrumb -->
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <ol class="breadcrumb">
+            <li><a href="#">content</a></li>
+            <li class="active"><span>create</span></li>
+        </ol>
+    </div>
+    <!-- /Breadcrumb -->
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default card-view">
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="form-wrap">
+                        @using (Html.BeginForm())
+                        {
+                            <h6 class="txt-dark capitalize-font"><i class="icon-list mr-10"></i>add content</h6>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">Category</label>
+                                        @Html.DropDownListFor(item => item.Type, (IEnumerable<SelectListItem>)CollectionsHelper.IEnumerableContentPage(), new { @class = "form-control with-selected" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">Description</label>
+                                        @*<textarea class="form-control" rows="4">Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. but the majority have suffered alteration in some form, by injected humour</textarea>*@
+                                        @Html.TextAreaFor(item => item.Description, new { @class = "form-control", Rows = 10, Cols = 80 })
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row -->
+                            <div class="form-actions">
+                                <button class="btn btn-success btn-icon left-icon mr-10"> <i class="fa fa-check"></i> <span>save</span></button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

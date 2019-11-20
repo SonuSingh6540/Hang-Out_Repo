@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hang-out</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="~/CDN/Content/Css/ui-login/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        @@import url('https://fonts.googleapis.com/css?family=Nunito');
+        @@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+        body, html {
+            background-image: url(/CDN/UI/Images/SM61354.jpg);
+            background-repeat: no-repeat; /*background-image: linear-gradient(rgb(12, 97, 33),rgb(104, 145, 162));*/
+            background-size: cover;
+        }
+
+        #particles-js {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+            position: fixed;
+            top: 0px;
+            z-index: -9999;
+        }
+
+        option {
+            background: none;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: #cecfd3;
+            padding: 20px 30px 10px 10px;
+            margin: 0;
+            width: 89.87%;
+            border: none;
+            border-bottom: 2px solid #cecfd3;
+            border-radius: 10px;
+        }
+    </style>
+    <style type="text/css">
+        .flex_style1 {
+            height: 500px;
+        }
+
+        @@font-face {
+            font-family: "My Custom Font";
+            src: url('/fonts/Southern.ttf') format("truetype");
+        }
+
+        p {
+            font-family: "My Custom Font", Southern;
+        }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #fff;
+            opacity: 1; /* Firefox */
+        }
+    </style>
+
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+    @RenderBody()
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="~/CDN/Content/Scripts/ui-login/easyResponsiveTabs.js" type="text/javascript"></script>
+    <div id="particles-js"></div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+        });
+    </script>
+    <script>
+        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js", function () {
+            particlesJS('particles-js',
+              {
+                  "particles": {
+                      "number": {
+                          "value": 80,
+                          "density": {
+                              "enable": true,
+                              "value_area": 800
+                          }
+                      },
+                      "color": {
+                          "value": "#ffffff"
+                      },
+                      "shape": {
+                          "type": "circle",
+                          "stroke": {
+                              "width": 0,
+                              "color": "#000000"
+                          },
+                          "polygon": {
+                              "nb_sides": 5
+                          },
+                          "image": {
+                              "width": 100,
+                              "height": 100
+                          }
+                      },
+                      "opacity": {
+                          "value": 0.5,
+                          "random": false,
+                          "anim": {
+                              "enable": false,
+                              "speed": 1,
+                              "opacity_min": 0.1,
+                              "sync": false
+                          }
+                      },
+                      "size": {
+                          "value": 5,
+                          "random": true,
+                          "anim": {
+                              "enable": false,
+                              "speed": 40,
+                              "size_min": 0.1,
+                              "sync": false
+                          }
+                      },
+                      "line_linked": {
+                          "enable": true,
+                          "distance": 150,
+                          "color": "#ffffff",
+                          "opacity": 0.4,
+                          "width": 1
+                      },
+                      "move": {
+                          "enable": true,
+                          "speed": 6,
+                          "direction": "none",
+                          "random": false,
+                          "straight": false,
+                          "out_mode": "out",
+                          "attract": {
+                              "enable": false,
+                              "rotateX": 600,
+                              "rotateY": 1200
+                          }
+                      }
+                  },
+                  "interactivity": {
+                      "detect_on": "canvas",
+                      "events": {
+                          "onhover": {
+                              "enable": true,
+                              "mode": "repulse"
+                          },
+                          "onclick": {
+                              "enable": true,
+                              "mode": "push"
+                          },
+                          "resize": true
+                      },
+                      "modes": {
+                          "grab": {
+                              "distance": 400,
+                              "line_linked": {
+                                  "opacity": 1
+                              }
+                          },
+                          "bubble": {
+                              "distance": 400,
+                              "size": 40,
+                              "duration": 2,
+                              "opacity": 8,
+                              "speed": 3
+                          },
+                          "repulse": {
+                              "distance": 200
+                          },
+                          "push": {
+                              "particles_nb": 4
+                          },
+                          "remove": {
+                              "particles_nb": 2
+                          }
+                      }
+                  },
+                  "retina_detect": true,
+                  "config_demo": {
+                      "hide_card": false,
+                      "background_color": "#b61924",
+                      "background_image": "",
+                      "background_position": "50% 50%",
+                      "background_repeat": "no-repeat",
+                      "background_size": "cover"
+                  }
+              }
+            );
+        });
+
+        $('input, :input').attr('autocomplete', 'off');
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

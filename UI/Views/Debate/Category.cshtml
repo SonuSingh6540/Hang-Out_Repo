@@ -1,0 +1,45 @@
+﻿﻿@model List<enCategory>
+@{
+    ViewBag.Title = "Debate Room";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var path = Helper.CategoryImagePath();
+}
+@section styles{
+    <link href="~/CDN/Content/Css/all.min.css" rel="stylesheet" />
+}
+
+<section class="content_section white_section page_title has_bg_image member_header bg_header2 enar_parallax">
+    <div class="content clearfix">
+    </div>
+</section>
+
+<section class="content_section bg_color6" style="min-height: 500px;">
+    <div class="content row_spacer no_padding">
+        <div class="main_title centered " style="font-size:30px;margin-top:10px">
+            <p>Select The Debate Category</p>
+        </div>
+        <!-- Filter Content -->
+        <div class="container-fluid">
+
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    var fullPath = path + item.Image_Name;
+                    <div class="col-sm-4">
+                        <div class="col-md-2">
+
+                            <a class="btn yellow btn-outline sbold" href="/debate/index/@item.ID">
+                                <i class="fas fa-circle"></i>
+                                @*<img src="@Url.Content(fullPath)" style="height:75px; width:75px"/>*@
+                                @Html.Raw(item.Name)
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+        <!-- End Filter Content -->
+    </div>
+</section>
+

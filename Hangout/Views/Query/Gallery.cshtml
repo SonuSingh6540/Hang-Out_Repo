@@ -1,0 +1,37 @@
+﻿@model List<enAdvertisementImage>
+@{
+    ViewBag.Title = "Hangout - Gallery";
+}
+
+@section scripts{
+    <script type="text/javascript">
+        function goToHome() {
+            location.href = "/query/advertise";
+        }
+    </script>
+}
+
+<div class="container" style="overflow: scroll; background:#fff;">
+    <div class="box box-danger">
+        <div class="box-header with-border">
+            <h3 class="box-title" style="text-align:center">Gallery</h3><hr />
+        </div><!-- /.box-header -->
+        <div class="box-body no-padding">
+            <ul class="users-list clearfix">
+                @foreach (var item in Model)
+                {
+                    var path = Helper.UserAdvertisementImagePath(ViewBag.UserID);
+                    var fullPath = path + item.Name;
+                    <li class="Image-list col-md-3" style="list-style:none">
+                        <img style="width:150px;height:150px; border:solid; border-color:gray" src='@Url.Content(fullPath)' alt="User Image" class="imageID" />
+                    </li>
+                }
+            </ul>
+        </div><!-- /.box-body -->
+
+        <div class="box-footer text-center">
+            <button type="submit" class="btn btn-sm btn-success" onclick="goToHome()">BACK</button>
+        </div><!-- /.box-footer -->
+    </div><!--/.box -->
+</div>
+

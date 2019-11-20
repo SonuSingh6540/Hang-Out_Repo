@@ -1,0 +1,976 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\Client\Hang-out\publish\UI</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>09/29/2017 13:27:18</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>09/29/2017 13:27:18</publishTime>
+    </File>
+    <File Include="bin/BusinessLogicLayer.dll">
+      <publishTime>09/29/2019 14:14:42</publishTime>
+    </File>
+    <File Include="bin/DataAccessLayer.dll">
+      <publishTime>09/29/2019 14:14:41</publishTime>
+    </File>
+    <File Include="bin/dotless.Core.dll">
+      <publishTime>10/12/2013 23:37:32</publishTime>
+    </File>
+    <File Include="bin/Entity.dll">
+      <publishTime>09/29/2019 14:14:37</publishTime>
+    </File>
+    <File Include="bin/Logger.dll">
+      <publishTime>09/29/2019 14:16:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/30/2016 16:07:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>07/12/2016 11:45:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>07/12/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>06/12/2016 15:15:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>07/12/2016 11:49:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>07/12/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>06/12/2016 15:09:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>03/04/2015 17:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>03/04/2015 17:07:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>04/05/2017 02:25:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>04/05/2017 02:25:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2012 15:23:58</publishTime>
+    </File>
+    <File Include="bin/MoreLinq.dll">
+      <publishTime>09/30/2017 04:33:12</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/08/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/NLog.config">
+      <publishTime>09/29/2017 14:55:39</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>08/08/2017 19:19:52</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>11/13/2012 12:19:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 04:02:42</publishTime>
+    </File>
+    <File Include="bin/System.ValueTuple.dll">
+      <publishTime>07/19/2017 10:01:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 04:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>01/28/2015 04:03:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/28/2015 04:03:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>10/28/2013 02:31:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.Less.dll">
+      <publishTime>05/08/2015 22:40:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/UI.dll">
+      <publishTime>09/29/2019 14:17:05</publishTime>
+    </File>
+    <File Include="bin/UIHelper.dll">
+      <publishTime>09/29/2019 14:14:43</publishTime>
+    </File>
+    <File Include="bin/Utility.dll">
+      <publishTime>09/29/2019 14:14:39</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/17/2013 17:03:52</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/all.min.css">
+      <publishTime>07/28/2019 17:48:46</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/animate.min.css">
+      <publishTime>05/06/2018 18:41:31</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/animations.css">
+      <publishTime>05/06/2018 18:41:31</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/bootstrap.css">
+      <publishTime>05/06/2018 18:41:31</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/bootstrap.min.css">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/dashboard.css">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/flexslider.css">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/fonts.css">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/icon-fonts.css">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/ImageModel.css">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/magnific-popup.css">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/main.css">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/style.css">
+      <publishTime>10/02/2019 18:58:02</publishTime>
+    </File>
+    <File Include="CDN/Content/Css/ui-login/style.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/archicons4a3f.eot">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/archicons4a3f.svg">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/archicons4a3f.ttf">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/archicons4a3f.woff">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/fontawesome-webfont5b62.eot">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/fontawesome-webfont5b62.html">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/fontawesome-webfont5b62.svg">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/fontawesome-webfont5b62.ttf">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/fontawesome-webfont5b62.woff">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/fontawesome-webfontd41d.eot">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular-2.html">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular-3.html">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular-4.html">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular-5.html">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular.html">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regulard41d.eot">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/glyphicons-halflings-regulard41d.html">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/idealtheme.eot">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/idealtheme.svg">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/idealtheme.ttf">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/idealtheme.woff">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/idealthemed41d.eot">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/revicons90c6.eot">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/revicons90c6.svg">
+      <publishTime>05/06/2018 18:41:32</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/revicons90c6.ttf">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/revicons90c6.woff">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/rt-icons-23dab.eot">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/rt-icons-23dab.svg">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/rt-icons-23dab.ttf">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/rt-icons-23dab.woff">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/rt-icons-2d41d.eot">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/socicon.eot">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/socicon.svg">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/socicon.ttf">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/socicon.woff">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/socicond41d.eot">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/Southern.ttf">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/souveni1.ttf">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/Souvenir.ttf">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/fonts/Tumpor_Le_Komer.ttf">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Rewark_Footer_img.jpg">
+      <publishTime>03/08/2019 14:23:45</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/admin.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/bootstrap.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/boxesFx.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/camera.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/chart-functions.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/Chart.bundle.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/chart.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/ckeditor/build-config.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/ckeditor/ckeditor.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/ckeditor/config.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/ckeditor/styles.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/compressed.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/daterangepicker.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/flexslider-min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/fullcalendar.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/functions.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/gmaps.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/ImageModel.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/isotope.pkgd.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jQuery-2.1.4.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery-jvectormap-2.0.3.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery-jvectormap-world-mill.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery-ui-1.10.3.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.arrayUtilities.js">
+      <publishTime>03/24/2019 13:40:15</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.dataTables.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.mb.YTPlayer.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.nav.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.nouislider.all.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.sparkline.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.themepunch.revolution.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.themepunch.tools.min.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>05/06/2018 18:41:33</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/jquery.videobackground.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/main.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/mediaelement-and-player.min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/modernizr-2.6.2.min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/moment.min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/photostack.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/plugins.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/progressbar.min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/switcher.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/ui-login/easyResponsiveTabs.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/ui-login/jquery.min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/Validate.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/wobbly-min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/world-maps/examples.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/world-maps/france_departments.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/world-maps/jquery.mapael.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/world-maps/jquery.mousewheel.min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/world-maps/raphael-min.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/world-maps/usa_states.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Content/Scripts/world-maps/world_countries.js">
+      <publishTime>05/06/2018 18:41:34</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/6deR-gettyimages-505248157-1024x1024.jpg">
+      <publishTime>06/23/2019 00:23:03</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/6qoT-galaxy-wallpapers-17.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/8K1u-activation.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/c4vs-IMG-20171016-WA0001.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/ho8p-image1.png">
+      <publishTime>06/23/2019 00:23:07</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/J5vw-send.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/JIr4-6a00e550199efb8833010536d8fab4970c.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/l8VP-IMG-20171016-WA0001.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/n5nO-gargi.jpg">
+      <publishTime>06/23/2019 00:22:58</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/pi3u-1507908006706blob.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/CategoryImages/tq0S-IMG-20171016-WA0001.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/aside_bg.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/background_section.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/bg-page.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/car.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/loading.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/noimage.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/owl.video.play.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/parallax/404.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/parallax/bottom.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/parallax/breadcrumbs.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/parallax/features.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/parallax/map.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/parallax/progress.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/parallax/texture.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern1.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern10.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern11.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern2.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern3.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern4.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern5.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern6.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern7.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern8.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/pattern9.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/preloader.gif">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/prettyPhoto/facebook/default_thumbnail.gif">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/services_sprite50x50.png">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/team/01.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/team/02.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/team/03.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/team/04.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/team/05.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/Hangout/Images/team/06.jpg">
+      <publishTime>05/06/2018 18:41:35</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/advertise.png">
+      <publishTime>06/23/2019 20:46:29</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/bg_header2.jpg">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/facebook-circle.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/gplus-circle.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/hang-out-4-1.jpg">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/hang-out.png">
+      <publishTime>07/27/2019 17:09:58</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/hang.jpg">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/hangout-logo.jpg">
+      <publishTime>07/23/2019 22:37:34</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/insta.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/l1.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/l2.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/l3.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/linkedin-circle.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/Login.cshtml">
+      <publishTime>08/11/2019 20:46:51</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/logo-light.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/logo-light1.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/logo.jpg">
+      <publishTime>02/07/2019 08:35:13</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/pin-circle.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/Rewark_Footer_img.jpg">
+      <publishTime>03/08/2019 13:59:01</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/SM61354.jpg">
+      <publishTime>02/06/2019 15:13:33</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/social.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/twitter-circle.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/WhatsApp Image 2019-07-01 at 17.25.37.jpeg">
+      <publishTime>02/07/2019 08:50:03</publishTime>
+    </File>
+    <File Include="CDN/UI/Images/youtube-circle.png">
+      <publishTime>06/09/2019 13:54:30</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>03/07/2019 08:04:15</publishTime>
+    </File>
+    <File Include="fonts/archicons4a3f.eot">
+      <publishTime>05/26/2019 08:07:52</publishTime>
+    </File>
+    <File Include="fonts/archicons4a3f.svg">
+      <publishTime>05/26/2019 08:07:52</publishTime>
+    </File>
+    <File Include="fonts/archicons4a3f.ttf">
+      <publishTime>05/26/2019 08:07:52</publishTime>
+    </File>
+    <File Include="fonts/archicons4a3f.woff">
+      <publishTime>05/26/2019 08:07:52</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont5b62.eot">
+      <publishTime>05/26/2019 08:07:52</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont5b62.html">
+      <publishTime>05/26/2019 08:07:52</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont5b62.svg">
+      <publishTime>05/26/2019 08:07:52</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont5b62.ttf">
+      <publishTime>05/26/2019 08:07:53</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont5b62.woff">
+      <publishTime>05/26/2019 08:07:53</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfontd41d.eot">
+      <publishTime>05/26/2019 08:07:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular-2.html">
+      <publishTime>05/26/2019 08:07:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular-3.html">
+      <publishTime>05/26/2019 08:07:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular-4.html">
+      <publishTime>05/26/2019 08:07:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular-5.html">
+      <publishTime>05/26/2019 08:07:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/10/2017 11:14:27</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.html">
+      <publishTime>05/26/2019 08:07:55</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/10/2017 11:14:27</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/10/2017 11:14:27</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/10/2017 11:14:27</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regulard41d.eot">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regulard41d.html">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/idealtheme.eot">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/idealtheme.svg">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/idealtheme.ttf">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/idealtheme.woff">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/idealthemed41d.eot">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/revicons90c6.eot">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/revicons90c6.svg">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/revicons90c6.ttf">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/revicons90c6.woff">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/rt-icons-23dab.eot">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/rt-icons-23dab.svg">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/rt-icons-23dab.ttf">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/rt-icons-23dab.woff">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/rt-icons-2d41d.eot">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/socicon.eot">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/socicon.svg">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/socicon.ttf">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/socicon.woff">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/socicond41d.eot">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/southern bolditalic.ttf">
+      <publishTime>05/26/2019 08:33:36</publishTime>
+    </File>
+    <File Include="fonts/southern italic.ttf">
+      <publishTime>05/26/2019 08:33:36</publishTime>
+    </File>
+    <File Include="fonts/Southern.ttf">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/souveni1.ttf">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/Souvenir.ttf">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="fonts/Tumpor_Le_Komer.ttf">
+      <publishTime>05/26/2019 08:07:59</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/29/2017 13:27:04</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/25/2017 17:57:10</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/10/2017 11:14:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/10/2017 11:14:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/10/2017 11:14:29</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/10/2017 11:14:29</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>04/10/2017 11:14:29</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.2.js">
+      <publishTime>10/25/2017 17:03:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.2.min.js">
+      <publishTime>10/25/2017 17:03:46</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/10/2017 11:14:45</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>08/27/2019 23:17:46</publishTime>
+    </File>
+    <File Include="Views/Content/About.cshtml">
+      <publishTime>08/09/2019 20:07:54</publishTime>
+    </File>
+    <File Include="Views/Content/Advertisement.cshtml">
+      <publishTime>08/16/2019 22:40:05</publishTime>
+    </File>
+    <File Include="Views/Content/Blog.cshtml">
+      <publishTime>10/15/2017 14:41:16</publishTime>
+    </File>
+    <File Include="Views/Content/Idea.cshtml">
+      <publishTime>08/16/2019 22:39:37</publishTime>
+    </File>
+    <File Include="Views/Content/Member.cshtml">
+      <publishTime>08/16/2019 22:39:08</publishTime>
+    </File>
+    <File Include="Views/Content/TermsAndConditions.cshtml">
+      <publishTime>08/09/2019 20:09:05</publishTime>
+    </File>
+    <File Include="Views/Content/Testimonial.cshtml">
+      <publishTime>10/15/2017 14:44:13</publishTime>
+    </File>
+    <File Include="Views/Content/Theme.cshtml">
+      <publishTime>10/15/2017 14:45:04</publishTime>
+    </File>
+    <File Include="Views/Content/Topic.cshtml">
+      <publishTime>08/16/2019 22:37:59</publishTime>
+    </File>
+    <File Include="Views/Content/Winner.cshtml">
+      <publishTime>08/16/2019 22:38:20</publishTime>
+    </File>
+    <File Include="Views/Debate/Category.cshtml">
+      <publishTime>09/22/2019 23:50:07</publishTime>
+    </File>
+    <File Include="Views/Debate/DebateRoom.cshtml">
+      <publishTime>09/29/2019 16:17:35</publishTime>
+    </File>
+    <File Include="Views/Debate/Index.cshtml">
+      <publishTime>08/16/2019 22:32:16</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>01/06/2019 19:13:25</publishTime>
+    </File>
+    <File Include="Views/Partial/Footer.cshtml">
+      <publishTime>07/27/2019 16:47:37</publishTime>
+    </File>
+    <File Include="Views/Partial/Header.cshtml">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/Payment/Index.cshtml">
+      <publishTime>06/09/2019 19:00:32</publishTime>
+    </File>
+    <File Include="Views/Payment/Return.cshtml">
+      <publishTime>08/31/2019 18:46:16</publishTime>
+    </File>
+    <File Include="Views/Query/Advertise.cshtml">
+      <publishTime>09/22/2019 23:42:01</publishTime>
+    </File>
+    <File Include="Views/Query/ContactUs.cshtml">
+      <publishTime>08/16/2019 22:48:23</publishTime>
+    </File>
+    <File Include="Views/Query/Profile.cshtml">
+      <publishTime>08/16/2019 22:48:54</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/17/2019 06:57:49</publishTime>
+    </File>
+    <File Include="Views/Shared/_Login.cshtml">
+      <publishTime>08/12/2019 23:12:51</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>04/10/2017 11:17:08</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/10/2017 11:14:14</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/29/2019 14:17:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

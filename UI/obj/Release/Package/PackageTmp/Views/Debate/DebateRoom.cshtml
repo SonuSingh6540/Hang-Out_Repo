@@ -1,0 +1,289 @@
+﻿﻿@model CommentModel
+@{
+    ViewBag.Title = "DebateRoom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userID = ViewBag.UserID;
+}
+
+@section styles{
+    <style type="text/css">
+        .comment-box {
+            margin: 10px;
+        }
+
+        h4.author_name {
+            margin: 0 0 10px 10px;
+        }
+
+        .wrapper {
+            position: relative;
+        }
+
+        .right, .left {
+            width: 50%;
+            position: absolute;
+        }
+
+        .right {
+            right: 15px;
+            text-align: right;
+        }
+
+        .left {
+            left: 10px;
+        }
+
+        .single_comment {
+            height: 120px;
+        }
+
+        .debateContainer {
+            margin: -2% 0 0 0;
+            padding-right: 10%;
+            padding-left: 10%;
+            position: fixed;
+            width: 100%;
+            z-index: 9999;
+            background: white;
+            height: 18%;
+        }
+
+        .leftAds {
+            margin-left: -50px;
+            margin-top: 10px;
+            width: 140px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        .rightAds {
+            margin-left: 75px;
+            margin-top: 10px;
+            width: 140px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        .adsDiv {
+            margin-top: 30px;
+        }
+
+        /*.text_base{
+            line-height:23px !important; 
+        }
+        .text_head{
+            line-height:19px !important;
+        }*/
+    </style>
+}
+
+@section scripts{
+    <script src="~/CDN/Content/Scripts/jquery.arrayUtilities.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var colorArray = ["#C1E0FF", "#8b8680", "#8b8589", "#8a7f80", "#878681", "#100c08", "#804040", "#ba160c", "#f38fa9"]
+            var i = 0;
+            @if(ViewBag.DistinctID != null)
+            {
+                foreach(var comment in ViewBag.DistinctID)
+                {
+                @:$(".commentBox_" + @comment.User_ID).css({"border-color": colorArray[i],"border-weight":"1px", "border-style":"solid"})
+                            @:i++;
+                            }
+            }
+
+            $("#typeFor").val("1")
+            $("#typeAgainst").val("2")
+            var rs = $(".comment_content");
+            var retval = []
+            var distinctID = []
+            $.each(rs, function (indx, val) {
+                var id = $(this).attr('id');
+                var lastChar = id.substr(id.length - 1);
+                retval.push(id)
+                distinctID.push(lastChar)
+            })
+        })
+
+        function likeClick(debateID, userID, commentID, type) {
+            $.ajax({
+                async: true,
+                type: "POST",
+                url: "/debate/debatelike/?commentID=" + commentID + "&userID=" + userID + "&debateID=" + debateID + "&type=" + type,
+                success: function (result) {
+                    if (result == "Success") {
+
+                    }
+                    else if (result == "Failure") {
+                    }
+                }
+            });
+        }
+
+        function sendComment(debateID, type) {
+            var message = "";
+            if (type == 1) {
+                message = $("#for_Message").val();
+                $("#for_Message").val("");
+            }
+            else if (type == 2) {
+                message = $("#against_Message").val();
+                $("#against_Message").val("");
+            }
+            $.ajax({
+                async: true,
+                type: "POST",
+                url: "/debate/ajaxcomment/?debID=" + debateID + "&type=" + type + "&msg=" + message,
+                success: function (result) {
+                    location.reload(true)
+                }
+            });
+        }
+
+    </script>
+}
+
+<div id="DebateHeader" class="debateContainer">
+    <blockquote>
+        <center><span class="quote_text head" style="line-height:23px;">@Html.Raw(ViewBag.DebateTopic) </span></center>
+    </blockquote>
+    <blockquote>
+        <span class="quote_text base" style="height: 61px;overflow: auto;line-height:19px; ">@Html.Raw(ViewBag.DebateDescription) </span>
+    </blockquote>
+</div>
+
+<section class="content_section">
+    <div class="content row_spacer no_padding" style="padding-top:5%">
+        <div class="rows_container clearfix content">
+            <div class="col-md-2 adsDiv">
+                @if (ViewBag.LeftDebateAdvertisementImage != null)
+                {
+                    foreach (var debateAdvertisementImage in (List<enDebateAdvertisementImage>)ViewBag.LeftDebateAdvertisementImage)
+                    {
+                        var path = Helper.DebateAdvertisementImagePath(debateAdvertisementImage.FKDebateAdvertisementId);
+                        path = path.Remove(path.IndexOf("~"), 1);
+                        <a href="@debateAdvertisementImage.Url" target="_blank">
+                            <img src="../..@path@debateAdvertisementImage.ImagePath" class="leftAds" />
+                        </a>
+                    }
+                }
+            </div>
+
+            <div class="col-md-4">
+                <div id="comments" class="comments-area" style="margin-left:-25%">
+                    <div class="small_title">
+                        <span class="small_title_con">
+                            <span class="s_icon"><i class="ico-comment-o"></i></span>
+                            <span class="s_text">For</span>
+                        </span>
+                    </div>
+
+                    <div style="height:500px;overflow-y:scroll">
+                        @if (ViewBag.AgainstListOfComments != null)
+                        {
+                            <ol class="comments_list clearfix">
+                                @foreach (var item in ViewBag.ForListOfComments)
+                                {
+                                    <li class="comment single_comment">
+                                        <h4 class="author_name">
+                                            <a href="#">@item.User_.Name</a>
+                                        </h4>
+                                        <div class="comment-container comment-box commentBox_@item.User_ID">
+                                            <div class="trees_number">1</div>
+                                            <div id="comment_for_@item.User_ID" class="comment_content">
+                                                <div class="comment_said_text">
+                                                    <p>@Html.Raw(item.Message)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper">
+                                            <div class="left"><span>@item.InsertedOn.ToString("HH:mm MMMM dd")</span></div>
+                                            <div class="right"><a onclick="likeClick(@item.Debate_ID,@item.User_ID,@item.ID,1)"><i class="fa fa-thumbs-up" aria-hidden="true" style="margin-right:5px;"></i>Like(@item.LikesCount)</a></div>
+                                        </div>
+                                    </li>
+                                }
+                            </ol>
+                        }
+                    </div>
+                    <!-- End Comments Tree -->
+                    <!-- Comments Form -->
+                    <div class="comments-form-area" id="comments-form">
+                        <div class="input-group" id="respond" style="margin-top:40px">
+                            <input class="form-control" type="text" id="for_Message" placeholder='Comment "For"'>
+                            <div class="input-group-btn">
+                                <button onclick="sendComment(@Model.Comments_.Debate_ID, 1)" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Comments Form -->
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div id="comments" class="comments-area" style="margin-right:-25%">
+                    <div class="small_title">
+                        <span class="small_title_con">
+                            <span class="s_icon"><i class="ico-comment-o"></i></span>
+                            <span class="s_text">Against</span>
+                        </span>
+                    </div>
+                    <div style="height:500px;overflow-y:scroll;">
+                        @if (ViewBag.AgainstListOfComments != null)
+                        {
+                            <ol class="comments_list clearfix">
+                                @foreach (var item in ViewBag.AgainstListOfComments)
+                                {
+                                    <li class="comment single_comment">
+                                        <h4 class="author_name">
+                                            <a href="#">@item.User_.Name</a>
+                                        </h4>
+                                        <div class="comment-container comment-box commentBox_@item.User_ID">
+                                            <div class="trees_number">1</div>
+                                            <div id="comment_against_@item.User_ID" class="comment_content">
+                                                <div class="comment_said_text">
+                                                    <p>@Html.Raw(item.Message)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper">
+                                            <div class="left"><span>@item.InsertedOn.ToString("HH:mm MMMM dd")</span></div>
+                                            <div class="right"><a onclick="likeClick(@item.Debate_ID,@item.User_ID,@item.ID,2)"><i class="fa fa-thumbs-up" aria-hidden="true" style="margin-right:5px;"></i>Like(@item.LikesCount)</a></div>
+                                        </div>
+                                    </li>
+                                }
+                            </ol>
+                        }
+                    </div>
+                    <!-- Comments Form -->
+                    <div class="comments-form-area" id="comments-form">
+                        <div class="input-group" style="margin-top:40px">
+                            <input class="form-control" type="text" id="against_Message" placeholder='Comment "Against"'>
+                            <div class="input-group-btn">
+                                <button onclick="sendComment(@Model.Comments_.Debate_ID, 2)" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Comments Form -->
+                </div>
+            </div>
+
+            <div class="col-md-2 adsDiv">
+
+                @if (ViewBag.RightDebateAdvertisementImage != null)
+                {
+                    foreach (var debateAdvertisementImage in (List<enDebateAdvertisementImage>)ViewBag.RightDebateAdvertisementImage)
+                    {
+                        var path = Helper.DebateAdvertisementImagePath(debateAdvertisementImage.FKDebateAdvertisementId);
+                        path = path.Remove(path.IndexOf("~"), 1);
+                        <a href="@debateAdvertisementImage.Url" target="_blank">
+                            <img src="../..@path@debateAdvertisementImage.ImagePath" class="rightAds" />
+                        </a>
+                    }
+                }
+
+            </div>
+            <!-- Grid 6 -->
+        </div>
+    </div>
+</section>

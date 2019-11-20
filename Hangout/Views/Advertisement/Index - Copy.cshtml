@@ -1,0 +1,99 @@
+﻿@model enAdvertisement
+@{
+    ViewBag.Title = "Index";
+    var sn = 1;
+    var ActionName = "index";
+    if (Model != null)
+    {
+        ActionName = "update";
+    }
+}
+
+<div class="container-fluid">
+    <!-- .row -->
+    @using (Html.BeginForm(ActionName, "advertisement", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="with_border with_padding">
+                    <h4>
+                        Add Advertisement
+                    </h4>
+                    <hr>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Vendor name :</label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(x => x.Vendor_Name, new { @class = "form-control", required = "required" })
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Image :</label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(m => m.AdvertisementImage, new { @type = "file" , required = "" })
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Url :</label>
+                        <div class="col-lg-9">
+                            @Html.TextBoxFor(x => x.Url, new { @class = "form-control", required = "" })
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Date: </label>
+
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(x => x.Date_To, new { @class = "form-control", type = "date" , required = "" })
+                        </div>
+                        <div class="col-lg-1" style="padding:10px;text-align:center;">
+                            To
+                        </div>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(x => x.Date_From, new { @class = "form-control", type = "date", required = "" })
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Time: </label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(x => x.Time_To, new { @class = "form-control", type = "time" , required = "" })
+                        </div>
+                        <div class="col-lg-1" style="padding:10px;text-align:center;">
+                            To
+                        </div>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(x => x.Time_From, new { @class = "form-control", type = "time" , required = "" })
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Amount: </label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(x => x.Amount, new { @class = "form-control" , required = "" })
+                        </div>
+                        <label class="col-lg-1 control-label">Reference Code: </label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(x => x.Reference_Code, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Select Page: </label>
+                        <div class="col-lg-9">
+                            @Html.DropDownListFor(item => item.Content_ID, (IEnumerable<SelectListItem>)CollectionsHelper.IEnumerableContentPage(), new { @class = "form-control with-selected ", required = "" })
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-lg-3 control-label">Select position: </label>
+                        <div class="col-lg-9">
+                            @Html.DropDownListFor(item => item.Position, (IEnumerable<SelectListItem>)CollectionsHelper.IEnumerablePagePosition(), new { @class = "form-control with-selected", required = "" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <button type="submit" class="theme_button wide_button">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

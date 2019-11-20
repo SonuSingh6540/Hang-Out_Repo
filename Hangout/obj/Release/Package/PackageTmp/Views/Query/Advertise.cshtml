@@ -1,0 +1,130 @@
+﻿@model List<enQuery>
+@{
+    ViewBag.Title = "Advertise";
+    var sn = 1;
+}
+@section styles{
+    <link href="~/CDN/Content/Css/ImageModel.css" rel="stylesheet" />
+}
+@section scripts{
+    <script type="text/javascript">
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById("img01");
+
+        function getImage(path) {
+            var fullPath = path.replace("~", "..");
+            modal.style.display = "block";
+            modalImg.src = fullPath;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        $('#tbl').DataTable();
+    </script>
+
+        <script src="/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+        <script src="/dist/js/dataTables-data.js"></script>
+        <script type="/text/javascript">
+            $('#tbl').DataTable();
+        </script>
+}
+
+<div class="row heading-bg bg-green">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h5 class="txt-light">Queries</h5>
+    </div>
+    <!-- Breadcrumb -->
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <ol class="breadcrumb">
+            <li><a href="#">Queries</a></li>
+            <li class="active"><span>Adviertise</span></li>
+        </ol>
+    </div>
+    <!-- /Breadcrumb -->
+</div>
+<!-- /Title -->
+<!-- Row -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default card-view">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">Advertise Table</h6>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="table-wrap">
+                        <div class="table-responsive">
+                            <table id="datable_1" class="table table-hover display  pb-30">
+                                <thead>
+                                    <tr>
+                                        <td>S.No</td>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Subject</th>
+                                        <th>Message</th>
+                                        <th>File</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <td>S.No</td>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Subject</th>
+                                        <th>Message</th>
+                                        <th>File</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        var AdvertisementPath = Helper.UserAdvertisementImagePath(item.User_ID) + item.File_Name;
+                                        <tr class="item-editable">
+                                            <td>
+                                                @sn
+                                            </td>
+                                            <td>
+                                                @Html.Raw(item.Name)
+                                            </td>
+                                            <td>
+                                                @item.E_Mail
+                                            </td>
+                                            <td>
+                                                @item.Contact
+                                            </td>
+                                            <td>
+                                                @item.Subject
+                                            </td>
+                                            <td>
+                                                @item.Message
+                                            </td>
+                                            <td>
+                                            <td class="media-middle">
+                                                <a href='@Url.Action("gallery","query",new { advertisementID = item.ID,userID = item.User_ID })'>Go to gallery</a>
+                                            </td>
+                                        </tr>
+                                        sn++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- .container -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+

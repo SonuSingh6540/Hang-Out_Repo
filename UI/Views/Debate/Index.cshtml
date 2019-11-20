@@ -1,0 +1,71 @@
+﻿@model List<enDebate>
+@{
+    ViewBag.Title ="Debate || " + ViewBag.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script type="text/javascript">
+        function gotoDebateRoom(d_ID) {
+            var url = "/debate/debateroom?debateID=" + d_ID
+            window.location.href = url;
+        }
+    </script>
+}
+
+<section class="content_section white_section page_title has_bg_image member_header bg_header2 enar_parallax">
+    <div class="content clearfix">
+    </div>
+</section>
+
+<section class="content_section bg_color6">
+    <div class="content row_spacer no_padding">
+        <div class="main_title centered upper">
+            <h2><span class="line"><i class="ico-pencil2" style="background-color: rgb(239, 246, 251);"></i></span>Select The Debate</h2>
+        </div>
+        <!-- Filter Content -->
+        <div class="hm_filter_wrapper timeline">
+            <ul class="hm_filter_wrapper_con timeline" style="position: relative; height: 2230.88px;">
+                @foreach (var item in Model)
+                {
+                    <li class="filter_item_block animated bounceInUp visible" data-animation-delay="300" data-animation="bounceInUp" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="timeline_block clearfix">
+                            <a href="#" class="timeline_post_format image"><i class="ico-image4"></i></a>
+                            <div class="timeline_feature">
+                            </div>
+                            <h6 class="timeline_title"><a href="#">@Html.Raw(item.Topic)</a></h6>
+                            <div class="article">@Html.Raw(item.Description)</div>
+                            <div class="clearfix">
+                                @if (item.IsActive == false)
+                                {
+                                    if (item.LikesCount != null)
+                                    {
+                                        <a class="read_more_button">
+                                            <i class="fa fa-thumbs-up"></i>Winner : @item.User_.Name ( @item.LikesCount Like(s))
+                                        </a>
+                                    }
+                                }
+                                else
+                                {
+                                    <a class="read_more_button" href="@Url.Action("debateroom", "debate", new {debateID = item.ID})">
+                                        <i class="ico-arrow-forward"></i>Read More
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </li><!-- Item -->
+                }
+            </ul>
+            <div class="centered">
+                <a href="#" class="btn_c">
+                    <span class="btn_c_ic_a"><i class="ico-refresh4"></i></span>
+                    <span class="btn_c_t">Load More</span>
+                    <span class="btn_c_ic_b"><i class="ico-refresh4"></i></span>
+                </a>
+            </div>
+        </div>
+        <!-- End Filter Content -->
+    </div>
+</section>
+
+
+

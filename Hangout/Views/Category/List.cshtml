@@ -1,0 +1,162 @@
+﻿@model List<enCategory>
+@{
+    ViewBag.Title = "Category || List";
+    var sn = 1;
+}
+@section styles{
+    <style type="text/css">
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+
+        .btn-danger {
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .modal-header {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+            background: brown;
+            color: #fff;
+        }
+    </style>
+}
+
+@section scripts{
+    <script src="/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/dist/js/dataTables-data.js"></script>
+    <script type="/text/javascript">
+        $('#tbl').DataTable();
+    </script>
+}
+
+<!-- Title -->
+<div class="row heading-bg bg-green">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h5 class="txt-light">Category</h5>
+    </div>
+    <!-- Breadcrumb -->
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <ol class="breadcrumb">
+            <li><a href="#">Dashboard</a></li>
+            <li class="active"><span>List</span></li>
+        </ol>
+    </div>
+    <!-- /Breadcrumb -->
+</div>
+<!-- /Title --> 
+
+<!-- Row -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default card-view">
+            <div class="panel-heading">
+                <div class="pull-left">
+                    <h6 class="panel-title txt-dark">category Table</h6>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="table-wrap">
+                        <div class="table-responsive">
+                            <table id="datable_1" class="table table-hover display  pb-30">
+                                <thead>
+                                    <tr>
+                                        <td>S.No</td>
+                                        <th>Name</th>
+                                        <th>Is Active</th>
+                                        <th>Date</th>
+                                        <th>Image</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <td>S.No</td>
+                                        <th>Name</th>
+                                        <th>Is Active</th>
+                                        <th>Date</th>
+                                        <th>Image</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        var path = Helper.CategoryImagePath() + item.Image_Name;
+                                        <tr class="item-editable">
+                                            <td>
+                                                @sn
+                                            </td>
+                                            <td>
+                                                @Html.Raw(item.Name)
+                                            </td>
+                                            <td>
+                                                @item.IsActive
+                                            </td>
+                                            <td>
+                                                @Helper.ConvertDateTimeToDate(item.InsertedOn)
+                                            </td>
+                                            <td>
+                                                @*<div class="media-body" style="width:80px;height:80px">
+                                                    @if (item.Image_Name != "")
+                                                    {
+                                                        <img src="@Url.Content(path)" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <img src="@Url.Content("~/CDN/Hangout/Images/noimage.png")" />
+                                                    }
+                                                </div>*@
+                                            </td>
+                                            <td>
+                                                <a class="btn yellow btn-outline sbold" href="/category/update/@item.ID">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </a>
+                                                <a class="btn red btn-outline sbold" href="/category/delete/@item.ID">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        sn++;
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Row -->
+
+
+

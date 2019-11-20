@@ -1,0 +1,326 @@
+﻿@model enQuery
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <style type="text/css">
+        .inner {
+            padding: 40px 40px 20px 25px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 105px;
+            margin: 0px;
+            outline: none;
+        }
+
+        .contact1 {
+            border: 1px #cc202e solid;
+            padding: 20px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .map-sec {
+            float: right;
+            position: relative;
+            z-index: 1;
+            margin-top: -10px;
+        }
+
+        .pointer {
+            float: left;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .inner h1 {
+            font-family: 'oswaldbold';
+            font-size: 30px;
+            color: #cc202e;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .cont-detail h4 {
+            text-transform: none;
+            font-family: 'oswaldbold';
+            font-weight: normal;
+            font-size: 24px;
+            margin: 40px 0 0 0;
+        }
+
+        .off-state, .off {
+            position: relative;
+            margin: 20px 0 0 0;
+        }
+
+        .reg-office h5 {
+            color: #cc202e;
+            font-size: 18px;
+            font-family: 'oswaldbold';
+            margin-bottom: 5px;
+        }
+
+        .cont-detail {
+            position: relative;
+        }
+
+        .cf {
+            margin: 0 auto 50px auto;
+        }
+
+        form {
+            max-width: 600px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+            form input, form textarea {
+                border: 0;
+                outline: 0;
+                padding: 1em;
+                -moz-border-radius: 8px;
+                -webkit-border-radius: 8px;
+                border-radius: 8px;
+                display: block;
+                width: 100%;
+                margin-top: 1em;
+                font-family: 'Merriweather', sans-serif;
+                -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                resize: none;
+            }
+
+                form input:focus, form textarea:focus {
+                    -moz-box-shadow: 0 0px 2px #e74c3c !important;
+                    -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+                    box-shadow: 0 0px 2px #e74c3c !important;
+                }
+
+        .submit {
+            color: white;
+            background: #cc202e;
+            cursor: pointer;
+        }
+
+            .submit:hover {
+                -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+                -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+                box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+            }
+
+        form textarea {
+            height: 126px;
+            border: 1px solid #ddd;
+        }
+
+        .half {
+            float: left;
+            width: 48%;
+            margin-bottom: 1em;
+        }
+
+        .right {
+            width: 50%;
+        }
+
+        .left {
+            margin-right: 2%;
+        }
+
+        @@media (max-width: 480px) {
+            .half {
+                width: 100%;
+                float: none;
+                margin-bottom: 0;
+            }
+        }
+
+        /* Clearfix */
+        .cf:before,
+        .cf:after {
+            content: " ";
+            /* 1 */
+            display: table;
+            /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .prof{
+            color:#00466e;
+        }
+    </style>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            getProfile(@ViewBag.UserID)
+            @if (ViewBag.Msg != null)
+            {
+                @:$("#msg").text('@ViewBag.Msg')
+                        }
+        })
+
+        function getProfile(uID) {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("getprofile", "query")',
+                data: { userID: uID },
+                success: function (data) {
+                    var countryList = @(Html.EnumToString<CountryCode>());
+                    var country = "";
+                    $.each(countryList, function (key, val) {
+                        if(data.Country == val){
+                           country = key;
+                        }
+                    })
+
+                    $("#u_name").text(data.Name)
+                    $("#u_dateOfJoining").text(formatJSONDate(data.InsertedOn).toDateString())
+                    $("#u_email").text(data.E_Mail)
+                    $("#u_country").text(country)
+                    $("#u_refCode").text(data.Reference_Code)
+                    $("#u_contact").text(data.Contact)
+                }
+            })
+        }
+
+        function getPoints(uID) {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("getpoints", "query")',
+                data: { userID: uID },
+                success: function (data) {
+                    console.log(data)
+                    $("#u_topic").text(data.IdeaPoint)
+                    $("#u_winner").text(data.WinnerPoint)
+                    $("#u_member").text(data.MemberPoint)
+                    $("#u_idea").text(data.TopicPoint)
+                    $("#u_advertisement").text(data.AdvertisePoint)
+                }
+            })
+        }
+
+        function formatJSONDate(jsonDate) {
+            var date = new Date(parseInt(jsonDate.substr(6)));
+            return date;
+        }
+    </script>
+}
+
+<section class="content_section white_section page_title has_bg_image member_header bg_header2 enar_parallax">
+    <div class="content clearfix">
+    </div>
+</section>
+
+<!-- End Page Title -->
+<!-- Skills -->
+<section class="content_section bg_gray border_t_n">
+    <div class="content row_spacer">
+        <div class="main_title centered upper">
+            <h2><span class="line"><span class="dot"></span></span>Your Profile Page</h2>
+        </div>
+        <div class="hm-tabs tabs2 upper_title is-ended">
+            <nav class="clearfix">
+                <ul class="tabs-navi">
+                    <li class="prev_selected"><a data-content="vission" class="selected" onclick="getProfile(@ViewBag.UserID)" href=""><span><i class="ico-star3"></i></span>Profile</a></li>
+                    <li class=""><a data-content="goals" href="#" onclick="getPoints(@ViewBag.UserID)"><span><i class="ico-paperplane"></i></span>Points</a></li>
+                    <li><a data-content="solutions" href="#" class=""><span><i class="ico-bulb"></i></span>Send Ideas & Topic</a> </li>
+                </ul> <!-- tabs-navi -->
+            </nav>
+
+            <ul class="tabs-body" style="height: auto;">
+                <li data-content="vission" class="clearfix selected" style="">
+                    <p class="prof" style="font-size:24px"> Profile</p>
+                    <div id="comments" class="comments-area">
+                        <div class="small_title">
+                            <span class="small_title_con">
+                                <span class="s_icon"><i class="ico-comment-o"></i></span>
+                                <span class="s_text">Info</span>
+                            </span>
+                        </div>
+
+                        <!-- Comments Tree -->
+                        <ol class="comments_list clearfix">
+                            <li class="comment single_comment">
+                                <!-- Comment -->
+                                <div class="comment-container comment-box">
+                                    <div class="comment_content">
+                                        <p>User Name : <span id="u_name" class="prof"></span></p>
+                                        <p>Date Of Joining : <span id="u_dateOfJoining" class="prof"></span></p>
+                                        <p>Email : <span id="u_email" class="prof"></span></p>
+                                        <p>Country : <span id="u_country" class="prof"></span></p>
+                                        <p>Contact : <span id="u_contact" class="prof"></span></p>
+                                        <p>Reference Code : <span id="u_refCode" class="prof"></span></p>
+                                    </div>
+                                </div>
+                                <!-- End Comment -->
+                            </li>
+                        </ol>
+                        <!-- End Comments Tree -->
+                    </div>
+                </li>
+
+                <li data-content="goals" class="" style="">
+                    <p class="prof" style="font-size:24px"> Points</p>
+                    <div id="comments" class="comments-area">
+                        <div class="small_title">
+                            <span class="small_title_con">
+                                <span class="s_icon"><i class="ico-comment-o"></i></span>
+                                <span class="s_text">Info</span>
+                            </span>
+                        </div>
+
+                        <!-- Comments Tree -->
+                        <ol class="comments_list clearfix">
+                            <li class="comment single_comment">
+                                <!-- Comment -->
+                                <div class="comment-container comment-box">
+                                    <div class="comment_content">
+                                        <p>Debate Topic Points : <span id="u_topic" class="prof"></span></p>
+                                        <p>Debate Winner Points : <span id="u_winner" class="prof"></span></p>
+                                        <p>Add Memeber Points : <span id="u_member" class="prof"></span></p>
+                                        <p>Inovative Ideas Points : <span id="u_idea" class="prof"></span></p>
+                                        <p>Advertisement Points : <span id="u_advertisement" class="prof"></span></p>
+                                    </div>
+                                </div>
+                                <!-- End Comment -->
+                            </li>
+                        </ol>
+                        <!-- End Comments Tree -->
+                    </div>
+                </li>
+
+                <li data-content="solutions" class="" style="">
+                    @using (Html.BeginForm("profile", "query", FormMethod.Post))
+                    {
+                        <div class="half left cf">
+                            @Html.TextBoxFor(x => x.Name, new { placeholder = "Name", required = "" })
+                            @Html.TextBoxFor(x => x.Contact, new { placeholder = "Contact", required = "" })
+                        </div>
+                        <div class="half right cf">
+                            @Html.TextBoxFor(x => x.E_Mail, new { placeholder = "E-Mail", required = "" })
+                            @Html.DropDownListFor(item => item.Topic_Type, (IEnumerable<SelectListItem>)CollectionsHelper.IEnumerableIdeaAndTopic(), "Select Subject", new { @class = "form-control", style = "margin-top:17px;", required = "" })
+                        </div>
+                        @Html.TextAreaFor(x => x.Message, new { placeholder = "Message", required = "" })
+                        <input class="submit" style="background-color:#00466e" type="submit" value="Submit" name="submit1">
+                    }
+                    <center><p style="color:red;font-size:large" id="msg"></p></center>
+                </li>
+            </ul>
+            <!-- Tabs Content -->
+        </div>
+        <!-- End Tabs Container -->
+    </div>
+</section>
+<!-- End Skills -->
+<!-- Client Say -->

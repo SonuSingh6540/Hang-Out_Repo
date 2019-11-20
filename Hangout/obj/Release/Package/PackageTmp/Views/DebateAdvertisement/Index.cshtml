@@ -1,0 +1,75 @@
+﻿@model enDebateAdvertisement
+@{
+    ViewBag.Title = "Index";
+    var ActionName = "index";
+    if (Model != null)
+    {
+        ActionName = "update";
+    }
+}
+
+<div class="row heading-bg  bg-red">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h5 class="txt-light">debate advertisement</h5>
+    </div>
+    <!-- Breadcrumb -->
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <ol class="breadcrumb">
+            <li><a href="#">DebateAdvertisement</a></li>
+            <li class="active"><span>index</span></li>
+        </ol>
+    </div>
+    <!-- /Breadcrumb -->
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default card-view">
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="form-wrap">
+                        @using (Html.BeginForm(ActionName, "debateadvertisement", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <h6 class="txt-dark capitalize-font"><i class="icon-list mr-10"></i>add debateAdvertisement</h6>
+                            <hr>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">Date</label>
+                                        @Html.TextBoxFor(x => x.DateTo, new { @class = "form-control", type = "date", required = "" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">To</label>
+                                        @Html.TextBoxFor(x => x.DateFrom, new { @class = "form-control", type = "date", required = "" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">Time</label>
+                                        @Html.TextBoxFor(x => x.TimeTo, new { @class = "form-control", type = "time", required = "" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">To</label>
+                                        @Html.TextBoxFor(x => x.TimeFrom, new { @class = "form-control", type = "time", required = "" })
+                                    </div>
+                                </div>
+                            </div>
+                                <!-- Row -->
+                            <div class="form-actions">
+                                <button class="btn btn-success btn-icon left-icon mr-10"> <i class="fa fa-check"></i> <span>save</span></button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

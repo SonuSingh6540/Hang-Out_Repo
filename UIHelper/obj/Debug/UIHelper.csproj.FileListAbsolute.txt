@@ -1,0 +1,130 @@
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\UIHelper.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\UIHelper.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\Entity.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.Mvc.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\Utility.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\DataAccessLayer.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.Razor.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.WebPages.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\Entity.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\Utility.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.Mvc.xml
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\DataAccessLayer.pdb
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.Razor.xml
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.WebPages.xml
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.xml
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\obj\Debug\UIHelper.csprojResolveAssemblyReference.cache
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\obj\Debug\UIHelper.dll
+C:\Users\Technologies\documents\visual studio 2015\Projects\Hangout\UIHelper\obj\Debug\UIHelper.pdb
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\UIHelper.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\UIHelper.pdb
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\BusinessLogicLayer.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\Entity.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.Mvc.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\Utility.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\DataAccessLayer.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.Razor.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.WebPages.Razor.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.WebPages.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\BusinessLogicLayer.pdb
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\Entity.pdb
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\Utility.pdb
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.Mvc.xml
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\DataAccessLayer.pdb
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.Razor.xml
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.WebPages.Razor.xml
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.WebPages.xml
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.xml
+F:\Document\Hangout-Project\Hangout\UIHelper\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\Document\Hangout-Project\Hangout\UIHelper\obj\Debug\UIHelper.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout\UIHelper\obj\Debug\UIHelper.dll
+F:\Document\Hangout-Project\Hangout\UIHelper\obj\Debug\UIHelper.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\UIHelper.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\UIHelper.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\BusinessLogicLayer.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\Entity.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.Mvc.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\Utility.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\DataAccessLayer.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.Razor.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.WebPages.Razor.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.WebPages.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\BusinessLogicLayer.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\Entity.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\Utility.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.Mvc.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\DataAccessLayer.pdb
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.Razor.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.WebPages.Razor.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.WebPages.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\obj\Debug\UIHelper.csprojResolveAssemblyReference.cache
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\obj\Debug\UIHelper.dll
+F:\Document\Hangout-Project\Hangout-26-06-18\UIHelper\obj\Debug\UIHelper.pdb
+F:\Hang-Out\UIHelper\bin\Debug\UIHelper.dll.config
+F:\Hang-Out\UIHelper\bin\Debug\UIHelper.dll
+F:\Hang-Out\UIHelper\bin\Debug\UIHelper.pdb
+F:\Hang-Out\UIHelper\bin\Debug\BusinessLogicLayer.dll
+F:\Hang-Out\UIHelper\bin\Debug\Entity.dll
+F:\Hang-Out\UIHelper\bin\Debug\Newtonsoft.Json.dll
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.Mvc.dll
+F:\Hang-Out\UIHelper\bin\Debug\Utility.dll
+F:\Hang-Out\UIHelper\bin\Debug\DataAccessLayer.dll
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.Razor.dll
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.WebPages.Razor.dll
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.WebPages.dll
+F:\Hang-Out\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\Hang-Out\UIHelper\bin\Debug\BusinessLogicLayer.pdb
+F:\Hang-Out\UIHelper\bin\Debug\Entity.pdb
+F:\Hang-Out\UIHelper\bin\Debug\Utility.pdb
+F:\Hang-Out\UIHelper\bin\Debug\Newtonsoft.Json.xml
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.Mvc.xml
+F:\Hang-Out\UIHelper\bin\Debug\DataAccessLayer.pdb
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.Razor.xml
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.WebPages.Razor.xml
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.WebPages.xml
+F:\Hang-Out\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.xml
+F:\Hang-Out\UIHelper\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\Hang-Out\UIHelper\obj\Debug\UIHelper.csprojResolveAssemblyReference.cache
+F:\Hang-Out\UIHelper\obj\Debug\UIHelper.dll
+F:\Hang-Out\UIHelper\obj\Debug\UIHelper.pdb
+E:\Client\Hang-out\project\UIHelper\bin\Debug\UIHelper.dll.config
+E:\Client\Hang-out\project\UIHelper\bin\Debug\UIHelper.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\UIHelper.pdb
+E:\Client\Hang-out\project\UIHelper\bin\Debug\BusinessLogicLayer.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\Entity.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\Newtonsoft.Json.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\Utility.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\DataAccessLayer.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.Razor.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.WebPages.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Client\Hang-out\project\UIHelper\bin\Debug\BusinessLogicLayer.pdb
+E:\Client\Hang-out\project\UIHelper\bin\Debug\Entity.pdb
+E:\Client\Hang-out\project\UIHelper\bin\Debug\Utility.pdb
+E:\Client\Hang-out\project\UIHelper\bin\Debug\Newtonsoft.Json.xml
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.Mvc.xml
+E:\Client\Hang-out\project\UIHelper\bin\Debug\DataAccessLayer.pdb
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.Razor.xml
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.WebPages.xml
+E:\Client\Hang-out\project\UIHelper\bin\Debug\Microsoft.Web.Infrastructure.xml
+E:\Client\Hang-out\project\UIHelper\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Client\Hang-out\project\UIHelper\obj\Debug\UIHelper.csprojResolveAssemblyReference.cache
+E:\Client\Hang-out\project\UIHelper\obj\Debug\UIHelper.dll
+E:\Client\Hang-out\project\UIHelper\obj\Debug\UIHelper.pdb
