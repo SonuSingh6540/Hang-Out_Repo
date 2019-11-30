@@ -15,6 +15,8 @@ namespace Hangout.Controllers
         {
             return View();
         }
+
+        [ValidateInput(false)]
         [HttpPost]
         public ActionResult Create(enContest enContest)
         {

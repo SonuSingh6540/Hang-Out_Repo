@@ -332,9 +332,11 @@
     <Content Include="CDN\UI\Images\linkedin-circle.png" />
     <Content Include="CDN\UI\Images\logo-light.png" />
     <Content Include="CDN\UI\Images\logo-light1.png" />
+    <Content Include="CDN\UI\Images\Medium.jpg" />
     <Content Include="CDN\UI\Images\pin-circle.png" />
     <Content Include="CDN\UI\Images\Rewark_Footer_img.jpg" />
     <Content Include="CDN\UI\Images\SM61354.jpg" />
+    <Content Include="CDN\UI\Images\Small.jpg" />
     <Content Include="CDN\UI\Images\social.png" />
     <Content Include="CDN\UI\Images\twitter-circle.png" />
     <Content Include="CDN\UI\Images\WhatsApp Image 2019-07-01 at 17.25.37.jpeg" />
