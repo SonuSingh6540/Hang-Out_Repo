@@ -670,7 +670,7 @@ h2.resp-accordion {
                 transition: all 0.3s ease-out;
             }
 /*--meadia-quiries-start-here--*/
-@media(max-width:1440px) {
+/*@media(max-width:1440px) {
     .logo {
         padding: 12.1% 0;
     }
@@ -713,7 +713,7 @@ h2.resp-accordion {
     }
 }
 
-@media(max-width:1280px) {
+/*@media(max-width:1280px) {
     .logo-top h1 {
         font-size: 2.05em;
     }
@@ -1064,7 +1064,7 @@ h2.resp-accordion {
         font-size: 11px;
         padding: 3px 11px;
     }
-}
+}*/
 
 .loginContainer {
     padding: 50px;
@@ -1134,3 +1134,89 @@ h2.resp-accordion {
                 text-decoration: underline;
             }
 /*--meadia-quiries-end-here--*/
+
+
+
+/*-------------------------------------------------------------
+                    Responsive Designer
+-------------------------------------------------------------*/
+
+.loginContainer{
+ padding:50px !important;   
+}
+
+.loginContainer input{
+    margin-bottom:10px !important;
+}
+
+@media only screen and (max-width: 767px)
+{
+
+    body, html{
+        background-position:center;
+        background-size:cover;
+        height:100%;
+    }
+
+
+    .sticky-container
+    {
+        display:none;
+    }
+
+    .loginContainer {
+    padding: 20px !important;
+}
+
+    .head {
+    width: 100%;
+    margin: 50% auto;
+    -webkit-border-radius: 10px;
+}
+    .login-top input
+    {
+        margin-bottom:10px !important;
+        width:100% !important;
+    }
+
+    .login-top button
+    {
+        width:100%;
+    }
+
+    .loginContainer .logo
+    {
+        display:none;
+        width:100%;
+    }
+
+      .loginContainer .login
+    {
+        width:100%;
+    }
+
+    
+      .mobile_menu_trigger{
+          display:block !important;
+      }
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px)
+{
+    body, html{
+        height:100%;
+    }
+
+    
+      
+    .head{
+        margin:10% auto;
+    }
+
+     .login-top input
+    {
+        margin-bottom:10px !important;
+        width:100% !important;
+    }
+}
