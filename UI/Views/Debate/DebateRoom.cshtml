@@ -154,10 +154,10 @@
 </div>
 
 <section class="content_section">
-    <div class="content row_spacer no_padding" style="padding-top:5%">
-        <div class="rows_container clearfix content">
-            <div class="col-md-2 adsDiv">
-                @if (ViewBag.LeftDebateAdvertisementImage != null)
+    <div class="content row_spacer no_padding commentsection" style="padding-top:9%">
+        <div class="rows_container clearfix content commentsection">
+            <div class="col-md-2 adsDiv clearfix">
+                @*@if (ViewBag.LeftDebateAdvertisementImage != null)
                 {
                     foreach (var debateAdvertisementImage in (List<enDebateAdvertisementImage>)ViewBag.LeftDebateAdvertisementImage)
                     {
@@ -167,11 +167,24 @@
                             <img src="../..@path@debateAdvertisementImage.ImagePath" class="leftAds" />
                         </a>
                     }
-                }
+                }*@
+
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds"/>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds" />
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds" />
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds" />
+                </a>
             </div>
 
-            <div class="col-md-4">
-                <div id="comments" class="comments-area" style="margin-left:-25%">
+            <div class="col-md-4 col-sm-6">
+                <div id="comments" class="comments-area">
                     <div class="small_title">
                         <span class="small_title_con">
                             <span class="s_icon"><i class="ico-comment-o"></i></span>
@@ -179,7 +192,7 @@
                         </span>
                     </div>
 
-                    <div style="height:500px;overflow-y:scroll">
+                    <div class="chatwindow">
                         @if (ViewBag.AgainstListOfComments != null)
                         {
                             <ol class="comments_list clearfix">
@@ -220,15 +233,15 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div id="comments" class="comments-area" style="margin-right:-25%">
+            <div class="col-md-4 col-sm-6">
+                <div id="comments" class="comments-area">
                     <div class="small_title">
                         <span class="small_title_con">
                             <span class="s_icon"><i class="ico-comment-o"></i></span>
                             <span class="s_text">Against</span>
                         </span>
                     </div>
-                    <div style="height:500px;overflow-y:scroll;">
+                    <div class="chatwindow">
                         @if (ViewBag.AgainstListOfComments != null)
                         {
                             <ol class="comments_list clearfix">
@@ -268,9 +281,21 @@
                 </div>
             </div>
 
-            <div class="col-md-2 adsDiv">
+            <div class="col-md-2 adsDiv clearfix">
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />  
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />  
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />  
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" /> 
+                </a>
 
-                @if (ViewBag.RightDebateAdvertisementImage != null)
+                @*@if (ViewBag.RightDebateAdvertisementImage != null)
                 {
                     foreach (var debateAdvertisementImage in (List<enDebateAdvertisementImage>)ViewBag.RightDebateAdvertisementImage)
                     {
@@ -280,7 +305,7 @@
                             <img src="../..@path@debateAdvertisementImage.ImagePath" class="rightAds" />
                         </a>
                     }
-                }
+                }*@
 
             </div>
             <!-- Grid 6 -->

@@ -265,24 +265,4 @@
     </ul>
 </div>
 
-<!-- Modal -->
-@if (ViewBag.Contest != null)
-{
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-body">
-                    <p>
-                        @Html.Raw(ViewBag.Contest.Description)
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal" onclick="UserIntrest(@ViewBag.Contest.ID,true)">Interested</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="UserIntrest(@ViewBag.Contest.ID,false)">Not Interested</button>
-                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-}
+

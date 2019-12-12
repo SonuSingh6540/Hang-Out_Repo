@@ -2155,7 +2155,12 @@ h2.title2 {
     }
 
         .page_title.has_bg_image.member_header {
-            padding: 100px 0 145px;
+            padding: 0;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: top;
+    margin-top: -21px;
         }
 
         .page_title.has_bg_image::after {
@@ -14166,12 +14171,12 @@ a.img_popup {
     }
 
 #comments .comment-box {
-    background: #FEFEFE;
-    border: 1px solid #e5e5e5;
+    background: #eee;
+    border: 1px solid #e5e5e5 !important;
     margin-bottom: 5px;
     padding: 10px;
     border: 1px solid;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 #comments .trees_number {
@@ -16707,6 +16712,53 @@ table.check_out_table {
         border-top-color: rgba(255, 255, 255, 0.05);
     }
 }
+
+
+/*Designer Css*/
+
+.debateContainer {
+    width: 100% !important;
+    padding: 2% !important;
+    height: 136px !important;
+    background: #eee !important;
+    box-shadow: 1px 1px 15px #999;
+    z-index:1 !important;
+}
+
+    .debateContainer blockquote {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2px;
+    }
+
+.chatwindow {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.commentsection {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 0;
+}
+
+.leftAds,
+.rightAds {
+    margin: 5px 0px !important;
+}
+
+
+.adsDiv a {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+    .adsDiv a img {
+        width: 100%;
+        height: auto;
+    }
+
 /*-------------------------------------------------------------
                     Responsive Designer
 -------------------------------------------------------------*/
@@ -16723,17 +16775,21 @@ table.check_out_table {
         width: 100%;
         left: 0px;
         top: 80px;
-        display:none;
+        display: none;
     }
 
-        #navy li {
-            border-bottom: 1px #01314d solid;
-            width: 100% !important;
-        }
+    .chatwindow {
+        height: 200px;
+    }
 
-            #navy li a span {
-                padding: 10px !important;
-            }
+    #navy li {
+        border-bottom: 1px #01314d solid;
+        width: 100% !important;
+    }
+
+        #navy li a span {
+            padding: 10px !important;
+        }
 
     .one_page_site .nav_trigger {
         right: 10px;
@@ -16744,21 +16800,33 @@ table.check_out_table {
         padding: 0;
     }
 
-    .content_section
-    {
-        padding-top:40px;
+    .content_section {
+        padding-top: 40px;
     }
 
     .flex_style1 {
-    height: 500px !important;
-    overflow:auto;
-}
-
-    .sticky-container,
-    .has_bg_image{
-        display:none;
+        height: 500px !important;
+        overflow: auto;
     }
 
+    .sticky-container,
+    .has_bg_image {
+        display: none;
+    }
+
+    .debateContainer {
+        height: 110px !important;
+        position: absolute !important;
+    }
+
+    .adsDiv a img {
+        width: 47%;
+        float: left;
+        padding: 0;
+        height: auto;
+        margin: 5px !important;
+        border: 1px #666 solid;
+    }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -16772,7 +16840,7 @@ table.check_out_table {
         width: 100%;
         left: 0px;
         top: 80px;
-        display:none !important;
+        display: none;
     }
 
         #navy li {
@@ -16788,5 +16856,32 @@ table.check_out_table {
         right: 10px;
         top: 34px;
     }
-    
+
+    .debateContainer {
+        height: 120px !important;
+        position: absolute !important;
+    }
+
+    .adsDiv a img {
+        width: 23%;
+        float: left;
+        padding: 0;
+        height: auto;
+        margin:30px 5px !important;
+        border: 1px #666 solid;
+    }
+
+    .chatwindow {
+        height: 200px;
+    }
+
+
+}
+
+
+@media all and (min-width: 1023px) and (max-width: 1024px){
+    .adsDiv a img {
+        width: 100%;
+        margin:5px !important;
+    }
 }
