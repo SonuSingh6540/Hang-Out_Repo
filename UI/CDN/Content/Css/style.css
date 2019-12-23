@@ -16718,8 +16718,9 @@ table.check_out_table {
 
 .debateContainer {
     width: 100% !important;
-    padding: 2% !important;
-    height: 136px !important;
+    padding: 5px !important;
+    min-height: 120px !important;
+    height:auto;
     background: #eee !important;
     box-shadow: 1px 1px 15px #999;
     z-index:1 !important;
@@ -16731,6 +16732,11 @@ table.check_out_table {
         padding: 2px;
     }
 
+
+        .debateContainer blockquote p{
+            padding:10px;
+        }
+
 .chatwindow {
     height: 500px;
     overflow-y: auto;
@@ -16740,7 +16746,15 @@ table.check_out_table {
     width: 100% !important;
     max-width: 100%;
     padding: 0;
+    margin-top:3.5%;
 }
+
+
+.sticky-container
+{
+    display:none;
+}
+
 
 .leftAds,
 .rightAds {
@@ -16759,11 +16773,38 @@ table.check_out_table {
         height: auto;
     }
 
+    .dis-flex
+    {
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+    }
+
+    .footer-icons ul
+    {
+        display:flex;
+    }
+
+    .footer-icons ul li a
+    {
+        margin:0 2px;
+    }
+
+
 /*-------------------------------------------------------------
                     Responsive Designer
 -------------------------------------------------------------*/
 @media only screen and (max-width: 767px) {
 
+    
+    .footermain{
+        flex-wrap:wrap;
+    }
+
+    .footer-icons
+    {
+        margin-top:20px;
+    }
 
     .mobile_menu_trigger {
         display: block !important;
@@ -16786,6 +16827,12 @@ table.check_out_table {
         border-bottom: 1px #01314d solid;
         width: 100% !important;
     }
+
+
+    .small_title{
+    margin-top:30px;
+}
+
 
         #navy li a span {
             padding: 10px !important;
@@ -16817,6 +16864,7 @@ table.check_out_table {
     .debateContainer {
         height: 110px !important;
         position: absolute !important;
+        margin-top:-7% !important;
     }
 
     .adsDiv a img {
@@ -16827,6 +16875,33 @@ table.check_out_table {
         margin: 5px !important;
         border: 1px #666 solid;
     }
+
+     #status {
+                clear: both;
+                margin: 80px auto;
+                width: 95%;
+                display: block;
+            }
+
+     .commentsection .btn-group .btn
+     {
+         width:50%;
+         padding:15px;
+         font-size:1em;
+     }
+
+     .btn-default.btn-off.active,
+     .btn-default.btn-off.active
+     {
+         background:#fff !important;
+         color:#333 !important;
+     }
+
+     #logo{
+         margin-left:0;
+     }
+     
+
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {

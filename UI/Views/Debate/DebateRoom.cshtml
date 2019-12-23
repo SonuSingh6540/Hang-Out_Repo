@@ -7,74 +7,121 @@
 
 @section styles{
     <style type="text/css">
-        .comment-box {
-            margin: 10px;
-        }
+                .comment-box {
+                    margin: 10px;
+                }
 
-        h4.author_name {
-            margin: 0 0 10px 10px;
-        }
+                h4.author_name {
+                    margin: 0 0 10px 10px;
+                }
 
-        .wrapper {
-            position: relative;
-        }
+                .wrapper {
+                    position: relative;
+                }
 
-        .right, .left {
-            width: 50%;
-            position: absolute;
-        }
+                .right, .left {
+                    width: 50%;
+                    position: absolute;
+                }
 
-        .right {
-            right: 15px;
-            text-align: right;
-        }
+                .right {
+                    right: 15px;
+                    text-align: right;
+                }
 
-        .left {
-            left: 10px;
-        }
+                .left {
+                    left: 10px;
+                }
 
-        .single_comment {
-            height: 120px;
-        }
+                .single_comment {
+                    height: 120px;
+                }
 
-        .debateContainer {
-            margin: -2% 0 0 0;
-            padding-right: 10%;
-            padding-left: 10%;
-            position: fixed;
-            width: 100%;
-            z-index: 9999;
-            background: white;
-            height: 18%;
-        }
+                .debateContainer {
+                    margin: -2% 0 0 0;
+                    padding-right: 10%;
+                    padding-left: 10%;
+                    position: fixed;
+                    width: 100%;
+                    z-index: 9999;
+                    background: white;
+                    height: 18%;
+                }
 
-        .leftAds {
-            margin-left: -50px;
-            margin-top: 10px;
-            width: 140px;
-            height: 100px;
-            border-radius: 10px;
-        }
+                .leftAds {
+                    margin-left: -50px;
+                    margin-top: 10px;
+                    width: 140px;
+                    height: 100px;
+                    border-radius: 10px;
+                }
 
-        .rightAds {
-            margin-left: 75px;
-            margin-top: 10px;
-            width: 140px;
-            height: 100px;
-            border-radius: 10px;
-        }
+                .rightAds {
+                    margin-left: 75px;
+                    margin-top: 10px;
+                    width: 140px;
+                    height: 100px;
+                    border-radius: 10px;
+                }
 
-        .adsDiv {
-            margin-top: 30px;
-        }
+                .adsDiv {
+                    margin-top: 30px;
+                }
 
-        /*.text_base{
-            line-height:23px !important; 
-        }
-        .text_head{
-            line-height:19px !important;
-        }*/
+                /*.text_base{
+                    line-height:23px !important;
+                }
+                .text_head{
+                    line-height:19px !important;
+                }*/
+
+                .btn-default.btn-on.active{background-color: #5BB75B;color: white;}
+        .btn-default.btn-off.active{background-color: #DA4F49;color: white;}
+
+        .btn-default.btn-on-1.active{background-color: #006FFC;color: white;}
+        .btn-default.btn-off-1.active{background-color: #DA4F49;color: white;}
+
+        .btn-default.btn-on-2.active{background-color: #00D590;color: white;}
+        .btn-default.btn-off-2.active{background-color: #A7A7A7;color: white;}
+
+        .btn-default.btn-on-3.active{color: #5BB75B;font-weight:bolder;}
+        .btn-default.btn-off-3.active{color: #DA4F49;font-weight:bolder;}
+
+        .btn-default.btn-on-4.active{background-color: #006FFC;color: #5BB75B;}
+        .btn-default.btn-off-4.active{background-color: #DA4F49;color: #DA4F49;}
     </style>
+
+    <style type="text/css">
+        
+        /*.btn_mbl {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #aaa;
+            color: white;
+            font-family: Arial;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 5px;
+        }*/
+
+        @@media only screen and (min-width: 767px) {
+            #status {
+                display: none;
+            }
+            #for_section {
+                display: block;
+            }
+            #against_section {
+                display: block;
+            }
+        }
+        @@media only screen and (max-width: 767px) {
+            #against_section {
+                display: none;
+            }
+        }
+    </style>
+
 }
 
 @section scripts{
@@ -142,6 +189,18 @@
         }
 
     </script>
+
+    <script type="text/javascript">
+        function debateStatus(status){
+            if(status){
+                $("#for_section").hide();
+                $("#against_section").show();
+            }else{
+                $("#for_section").show();
+                $("#against_section").hide();
+            }
+        }
+    </script>
 }
 
 <div id="DebateHeader" class="debateContainer">
@@ -154,23 +213,34 @@
 </div>
 
 <section class="content_section">
-    <div class="content row_spacer no_padding commentsection" style="padding-top:9%">
+    <div class="content row_spacer no_padding commentsection">
+        <div class="btn-group" id="status" data-toggle="buttons">
+            <a class="btn btn-default btn-on btn-xs active" onclick="debateStatus(true)">
+                <input type="radio" value="1" name="multifeatured_module[module_id][status]" checked="checked">For
+            </a>
+            <a class="btn btn-default btn-off btn-xs" onclick="debateStatus(false)">
+                <input type="radio" value="0" name="multifeatured_module[module_id][status]">Against
+            </a>
+        </div>
+
+        <div class="clearfix"></div>
+
         <div class="rows_container clearfix content commentsection">
             <div class="col-md-2 adsDiv clearfix">
                 @*@if (ViewBag.LeftDebateAdvertisementImage != null)
-                {
-                    foreach (var debateAdvertisementImage in (List<enDebateAdvertisementImage>)ViewBag.LeftDebateAdvertisementImage)
                     {
-                        var path = Helper.DebateAdvertisementImagePath(debateAdvertisementImage.FKDebateAdvertisementId);
-                        path = path.Remove(path.IndexOf("~"), 1);
-                        <a href="@debateAdvertisementImage.Url" target="_blank">
-                            <img src="../..@path@debateAdvertisementImage.ImagePath" class="leftAds" />
-                        </a>
-                    }
-                }*@
+                        foreach (var debateAdvertisementImage in (List<enDebateAdvertisementImage>)ViewBag.LeftDebateAdvertisementImage)
+                        {
+                            var path = Helper.DebateAdvertisementImagePath(debateAdvertisementImage.FKDebateAdvertisementId);
+                            path = path.Remove(path.IndexOf("~"), 1);
+                            <a href="@debateAdvertisementImage.Url" target="_blank">
+                                <img src="../..@path@debateAdvertisementImage.ImagePath" class="leftAds" />
+                            </a>
+                        }
+                    }*@
 
                 <a href="#" target="_blank">
-                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds"/>
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds"  />
                 </a>
                 <a href="#" target="_blank">
                     <img src="~/CDN/UI/Images/advertise.png" class="leftAds" />
@@ -183,7 +253,7 @@
                 </a>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6" id="for_section">
                 <div id="comments" class="comments-area">
                     <div class="small_title">
                         <span class="small_title_con">
@@ -233,7 +303,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6" id="against_section">
                 <div id="comments" class="comments-area">
                     <div class="small_title">
                         <span class="small_title_con">
@@ -283,31 +353,50 @@
 
             <div class="col-md-2 adsDiv clearfix">
                 <a href="#" target="_blank">
-                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />  
+                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />
                 </a>
                 <a href="#" target="_blank">
-                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />  
+                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />
                 </a>
                 <a href="#" target="_blank">
-                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />  
+                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />
                 </a>
                 <a href="#" target="_blank">
-                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" /> 
+                    <img src="~/CDN/UI/Images/advertise.png" class="rightAds" />
                 </a>
 
                 @*@if (ViewBag.RightDebateAdvertisementImage != null)
-                {
-                    foreach (var debateAdvertisementImage in (List<enDebateAdvertisementImage>)ViewBag.RightDebateAdvertisementImage)
                     {
-                        var path = Helper.DebateAdvertisementImagePath(debateAdvertisementImage.FKDebateAdvertisementId);
-                        path = path.Remove(path.IndexOf("~"), 1);
-                        <a href="@debateAdvertisementImage.Url" target="_blank">
-                            <img src="../..@path@debateAdvertisementImage.ImagePath" class="rightAds" />
-                        </a>
-                    }
-                }*@
+                        foreach (var debateAdvertisementImage in (List<enDebateAdvertisementImage>)ViewBag.RightDebateAdvertisementImage)
+                        {
+                            var path = Helper.DebateAdvertisementImagePath(debateAdvertisementImage.FKDebateAdvertisementId);
+                            path = path.Remove(path.IndexOf("~"), 1);
+                            <a href="@debateAdvertisementImage.Url" target="_blank">
+                                <img src="../..@path@debateAdvertisementImage.ImagePath" class="rightAds" />
+                            </a>
+                        }
+                    }*@
 
             </div>
+
+
+            <div class="clearfix"></div>
+
+            <div class="col-lg-12">
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds" />
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds" />
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds" />
+                </a>
+                <a href="#" target="_blank">
+                    <img src="~/CDN/UI/Images/advertise.png" class="leftAds" />
+                </a>
+            </div>
+
             <!-- Grid 6 -->
         </div>
     </div>
