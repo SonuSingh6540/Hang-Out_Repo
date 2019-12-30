@@ -5,7 +5,6 @@ License URL: https://www.designmaz.net/licence/
 --*/
 /* start editing from here */
 
-@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
@@ -14,14 +13,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font-family: 'PT Sans', sans-serif !important;
 }
 
 
 
-body, html
-{
-    background-position:center !important;
+body, html {
+    background-position: 0% 20% !important;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -122,19 +126,18 @@ body {
     font-size: 100%;
 }
 
-.logo-top h1 {
-    font-size: 1.4em;
-    color: #fff;
+.logo-top {
+    
     text-align: center;
-    font-family: 'Southern';
+    
 }
 
 .logo-bottom {
-    margin-top: 8.5%;
+    padding-bottom:30px;
 }
 
 .head {
-        width: 80%;
+    width: 80%;
     margin: 0% auto 0;
     background: rgba(50, 50, 50, 0.45);
     -webkit-border-radius: 50px;
@@ -143,8 +146,10 @@ body {
 .logo {
     width: 45%;
     float: left;
-    padding: 11.57% 0;
+    padding: 0;
     border-right: 1px solid #cecfd3;
+    display:flex;
+    flex-direction:column;
 }
 
 .login {
@@ -707,21 +712,22 @@ h2.resp-accordion {
     width: 78%;
 	margin: 10.5% auto 0;
 }*/
-    .logo-top {
-        margin-top: 1.1%;
-    }
+.logo-top {
+    margin-top: 1.1%;
+}
 
-    .footer {
-        margin-top: 6%;
-    }
+.footer {
+    margin-top: 6%;
+}
 
-    .logo {
-        padding: 12.15% 0;
-    }
+.logo {
+    padding: 12.15% 0;
+}
 
-    .login input[type="text"], .login input[type="password"] {
-        width: 88.3%;
-    }
+.login input[type="text"], .login input[type="password"] {
+    width: 88.3%;
+}
+
 }
 
 /*@media(max-width:1280px) {
@@ -1149,21 +1155,19 @@ h2.resp-accordion {
 
 
 
-    .login-logo
-    {
-        height:220px;
-        padding:0;
-    }
+.login-logo {
+    height:auto;
+    padding: 0;
+}
 
-    .nopadding
-    {
-        padding:0 !important;
-    }
+.nopadding {
+    padding: 0 !important;
+}
 
-    .login-logo img
-    {
-        width:200px;
-    }
+.login-logo img {
+    width: 200px;
+}
+
 
 
 
@@ -1171,89 +1175,79 @@ h2.resp-accordion {
                     Responsive Designer
 -------------------------------------------------------------*/
 
-.loginContainer{
- padding:50px !important;   
+.loginContainer {
+    padding: 50px !important;
 }
 
-.loginContainer input{
-    margin-bottom:10px !important;
-}
+    .loginContainer input {
+        margin-bottom: 10px !important;
+    }
 
-@media only screen and (max-width: 767px)
-{
+@media only screen and (max-width: 767px) {
 
-    body, html{
-        background-position:center;
-        background-size:cover;
-        height:100%;
+    body, html {
+        background-position: center;
+        background-size: cover;
+        height: 120vh;
+    overflow: hidden;
     }
 
 
-    .sticky-container
-    {
-        display:none;
+    .sticky-container {
+        display: none;
     }
 
     .loginContainer {
-    padding: 20px !important;
-}
+        padding: 20px !important;
+    }
 
     .head {
-    width: 100%;
-    margin: 50% auto;
-    -webkit-border-radius: 10px;
-}
-    .login-top input
-    {
-        margin-bottom:10px !important;
-        width:100% !important;
+        width: 100%;
+        margin: 50% auto;
+        -webkit-border-radius: 10px;
     }
 
-    .login-top button
-    {
-        width:100%;
+    .login-top input {
+        margin-bottom: 10px !important;
+        width: 100% !important;
     }
 
-    .loginContainer .logo
-    {
-        display:none;
-        width:100%;
+    .login-top button {
+        width: 100%;
     }
 
-      .loginContainer .login
-    {
-        width:100%;
+    .loginContainer .logo {
+        display: none;
+        width: 100%;
     }
 
-    
-      .mobile_menu_trigger{
-          display:block !important;
-      }
+    .loginContainer .login {
+        width: 100%;
+    }
 
+    /*.mobile_menu_trigger {
+        display: block !important;
+    }*/
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px)
-{
-    body, html{
-        height:100%;
-    }
-
-
-    .head
-    {
-            margin: 0% !important;
-    width: 100%;
-    }
-
-
-    
-    .login-logo  {
-        height:140px;
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    body, html {
+        height: 100%;
     }
     
-     .login-top input
-    {
-        margin-bottom:10px !important;
-        width:100% !important;
+    .head {
+        margin: 0% !important;
+        width: 100%;
+    }
+
+    
+body, html {
+    background-position:50% 20% !important;
+}
+
+    
+    .login-top input {
+        margin-bottom: 10px !important;
+        width: 100% !important;
     }
 }

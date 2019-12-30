@@ -7,13 +7,12 @@
     <style type="text/css">
         @@import url('https://fonts.googleapis.com/css?family=Nunito');
         @@import url('https://fonts.googleapis.com/css?family=Poiret+One');
-html
-{
-
-			background-image:url(/CDN/UI/images/hang.jpg);
-			background-size:cover;
-background-color:none !important;		
-}
+        html
+        {
+			        background-image:url(/CDN/UI/images/hang.jpg);
+			        background-size:cover;
+                    background-color:none !important;		
+        }
         body, html {
             background-repeat: no-repeat; /*background-image: linear-gradient(rgb(12, 97, 33),rgb(104, 145, 162));*/
             position: relative;
@@ -124,9 +123,9 @@ background-color:none !important;
         </div>
         <div class="logo-bottom">
             <section class="sky-form">
-                <label class="radio"><input type="radio" name="radio" checked=""><i></i>Create a platform to inform the people of what they should know, to educate the people, and to help them reach a logical understanding of the facts.</label>
-                <label class="radio"><input type="radio" name="radio"><i></i>Take your thoughts to the global levels and create an identity of your own with the impact that your views may carry.</label>
-                <label class="radio"><input type="radio" name="radio"><i></i>Express yourself without any intervention from within your group or the opposition.</label>
+                <label class="radio"><input type="radio" name="radio" checked=""><i></i><p>Create a platform to inform the people of what they should know, to educate the people, and to help them reach a logical understanding of the facts.</p></label>
+                <label class="radio"><input type="radio" name="radio"><i></i><p>Take your thoughts to the global levels and create an identity of your own with the impact that your views may carry.</p></label>
+                <label class="radio"><input type="radio" name="radio"><i></i><p>Express yourself without any intervention from within your group or the opposition.</p></label>
                 @if (ViewBag.VerificationMessage != null)
                 {
                     <label style="color:red">@ViewBag.VerificationMessage</label>
