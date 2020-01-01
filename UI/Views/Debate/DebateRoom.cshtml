@@ -137,7 +137,7 @@
                 {
                 @:$(".commentBox_" + @comment.User_ID).css({"border-color": colorArray[i],"border-weight":"1px", "border-style":"solid"})
                             @:i++;
-                            }
+                }
             }
 
             $("#typeFor").val("1")
@@ -208,7 +208,7 @@
         <center><span class="quote_text head" style="line-height:23px;">@Html.Raw(ViewBag.DebateTopic) </span></center>
     </blockquote>
     <blockquote>
-        <span class="quote_text base" style="height: 61px;overflow: auto;line-height:19px; ">@Html.Raw(ViewBag.DebateDescription) </span>
+        <span class="quote_text base" style="height: 68px;overflow: auto;line-height:19px; ">@Html.Raw(ViewBag.DebateDescription) </span>
     </blockquote>
 </div>
 
