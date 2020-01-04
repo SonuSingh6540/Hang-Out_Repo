@@ -1188,8 +1188,7 @@ h2.resp-accordion {
     body, html {
         background-position: center;
         background-size: cover;
-        height: 100%;
-    
+    height:auto !important;
     }
 
     .loginContainer .logo
@@ -1209,7 +1208,7 @@ h2.resp-accordion {
 
     .head {
         width: 100%;
-        margin: 50% auto;
+        margin: 10% auto;
         -webkit-border-radius: 10px;
     }
 
